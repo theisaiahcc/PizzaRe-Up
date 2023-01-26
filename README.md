@@ -10,4 +10,5 @@ name/#1_the-issue
 Visual Studio 2022
 
 ## Links
+[Visual Basic Prefixes](https://homepages.uc.edu/~thomam/Intro_OOP_Text/Misc/VB_prefixes.html)
 [CRUD](https://www.codecademy.com/article/what-is-crud)
