@@ -1,6 +1,6 @@
 ﻿namespace PizzaRe_up
 {
-    partial class Form1
+    partial class PizzaAppForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.whiteRdoBtn = new System.Windows.Forms.RadioButton();
+            this.redRdoBtn = new System.Windows.Forms.RadioButton();
             this.grpSauce = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.peppChkBox = new System.Windows.Forms.CheckBox();
+            this.sausageChkBox = new System.Windows.Forms.CheckBox();
+            this.hamChkBox = new System.Windows.Forms.CheckBox();
+            this.baconChkBox = new System.Windows.Forms.CheckBox();
+            this.chickenChkBox = new System.Windows.Forms.CheckBox();
+            this.peppersChkBox = new System.Windows.Forms.CheckBox();
+            this.mushChkBox = new System.Windows.Forms.CheckBox();
+            this.olivesChkBox = new System.Windows.Forms.CheckBox();
+            this.jalaChkBox = new System.Windows.Forms.CheckBox();
+            this.submitBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpSauce.SuspendLayout();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // whiteRdoBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 19);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "White";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.whiteRdoBtn.AutoSize = true;
+            this.whiteRdoBtn.Location = new System.Drawing.Point(6, 24);
+            this.whiteRdoBtn.Name = "whiteRdoBtn";
+            this.whiteRdoBtn.Size = new System.Drawing.Size(56, 19);
+            this.whiteRdoBtn.TabIndex = 3;
+            this.whiteRdoBtn.TabStop = true;
+            this.whiteRdoBtn.Text = "White";
+            this.whiteRdoBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // redRdoBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 47);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 19);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Red";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.redRdoBtn.AutoSize = true;
+            this.redRdoBtn.Location = new System.Drawing.Point(6, 47);
+            this.redRdoBtn.Name = "redRdoBtn";
+            this.redRdoBtn.Size = new System.Drawing.Size(45, 19);
+            this.redRdoBtn.TabIndex = 4;
+            this.redRdoBtn.TabStop = true;
+            this.redRdoBtn.Text = "Red";
+            this.redRdoBtn.UseVisualStyleBackColor = true;
             // 
             // grpSauce
             // 
-            this.grpSauce.Controls.Add(this.radioButton1);
-            this.grpSauce.Controls.Add(this.radioButton2);
+            this.grpSauce.Controls.Add(this.whiteRdoBtn);
+            this.grpSauce.Controls.Add(this.redRdoBtn);
             this.grpSauce.Location = new System.Drawing.Point(124, 12);
             this.grpSauce.Name = "grpSauce";
             this.grpSauce.Size = new System.Drawing.Size(110, 78);
@@ -79,113 +79,113 @@
             this.grpSauce.TabStop = false;
             this.grpSauce.Text = "Sauce";
             // 
-            // checkBox1
+            // peppChkBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(18, 28);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 19);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Pepperoni";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.peppChkBox.AutoSize = true;
+            this.peppChkBox.Location = new System.Drawing.Point(18, 28);
+            this.peppChkBox.Name = "peppChkBox";
+            this.peppChkBox.Size = new System.Drawing.Size(80, 19);
+            this.peppChkBox.TabIndex = 11;
+            this.peppChkBox.Text = "Pepperoni";
+            this.peppChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // sausageChkBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(18, 56);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 19);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "Sausage";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.sausageChkBox.AutoSize = true;
+            this.sausageChkBox.Location = new System.Drawing.Point(18, 56);
+            this.sausageChkBox.Name = "sausageChkBox";
+            this.sausageChkBox.Size = new System.Drawing.Size(69, 19);
+            this.sausageChkBox.TabIndex = 12;
+            this.sausageChkBox.Text = "Sausage";
+            this.sausageChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // hamChkBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(18, 84);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(52, 19);
-            this.checkBox3.TabIndex = 13;
-            this.checkBox3.Text = "Ham";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.hamChkBox.AutoSize = true;
+            this.hamChkBox.Location = new System.Drawing.Point(18, 84);
+            this.hamChkBox.Name = "hamChkBox";
+            this.hamChkBox.Size = new System.Drawing.Size(52, 19);
+            this.hamChkBox.TabIndex = 13;
+            this.hamChkBox.Text = "Ham";
+            this.hamChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // baconChkBox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(18, 112);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(59, 19);
-            this.checkBox4.TabIndex = 14;
-            this.checkBox4.Text = "Bacon";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.baconChkBox.AutoSize = true;
+            this.baconChkBox.Location = new System.Drawing.Point(18, 112);
+            this.baconChkBox.Name = "baconChkBox";
+            this.baconChkBox.Size = new System.Drawing.Size(59, 19);
+            this.baconChkBox.TabIndex = 14;
+            this.baconChkBox.Text = "Bacon";
+            this.baconChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chickenChkBox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(18, 140);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(69, 19);
-            this.checkBox5.TabIndex = 15;
-            this.checkBox5.Text = "Chicken";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chickenChkBox.AutoSize = true;
+            this.chickenChkBox.Location = new System.Drawing.Point(18, 140);
+            this.chickenChkBox.Name = "chickenChkBox";
+            this.chickenChkBox.Size = new System.Drawing.Size(69, 19);
+            this.chickenChkBox.TabIndex = 15;
+            this.chickenChkBox.Text = "Chicken";
+            this.chickenChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // peppersChkBox
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(18, 168);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(68, 19);
-            this.checkBox6.TabIndex = 16;
-            this.checkBox6.Text = "Peppers";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.peppersChkBox.AutoSize = true;
+            this.peppersChkBox.Location = new System.Drawing.Point(18, 168);
+            this.peppersChkBox.Name = "peppersChkBox";
+            this.peppersChkBox.Size = new System.Drawing.Size(68, 19);
+            this.peppersChkBox.TabIndex = 16;
+            this.peppersChkBox.Text = "Peppers";
+            this.peppersChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // mushChkBox
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(18, 196);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(90, 19);
-            this.checkBox7.TabIndex = 17;
-            this.checkBox7.Text = "Mushrooms";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.mushChkBox.AutoSize = true;
+            this.mushChkBox.Location = new System.Drawing.Point(18, 196);
+            this.mushChkBox.Name = "mushChkBox";
+            this.mushChkBox.Size = new System.Drawing.Size(90, 19);
+            this.mushChkBox.TabIndex = 17;
+            this.mushChkBox.Text = "Mushrooms";
+            this.mushChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // olivesChkBox
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(18, 224);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(58, 19);
-            this.checkBox8.TabIndex = 18;
-            this.checkBox8.Text = "Olives";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.olivesChkBox.AutoSize = true;
+            this.olivesChkBox.Location = new System.Drawing.Point(18, 224);
+            this.olivesChkBox.Name = "olivesChkBox";
+            this.olivesChkBox.Size = new System.Drawing.Size(58, 19);
+            this.olivesChkBox.TabIndex = 18;
+            this.olivesChkBox.Text = "Olives";
+            this.olivesChkBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // jalaChkBox
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(18, 252);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(77, 19);
-            this.checkBox9.TabIndex = 19;
-            this.checkBox9.Text = "Jalapenos";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.jalaChkBox.AutoSize = true;
+            this.jalaChkBox.Location = new System.Drawing.Point(18, 252);
+            this.jalaChkBox.Name = "jalaChkBox";
+            this.jalaChkBox.Size = new System.Drawing.Size(77, 19);
+            this.jalaChkBox.TabIndex = 19;
+            this.jalaChkBox.Text = "Jalapenos";
+            this.jalaChkBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // submitBtn
             // 
-            this.button1.Location = new System.Drawing.Point(159, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submitBtn.Location = new System.Drawing.Point(159, 207);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(75, 23);
+            this.submitBtn.TabIndex = 20;
+            this.submitBtn.Text = "Submit";
+            this.submitBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // editBtn
             // 
-            this.button2.Location = new System.Drawing.Point(159, 245);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editBtn.Location = new System.Drawing.Point(159, 245);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(75, 23);
+            this.editBtn.TabIndex = 21;
+            this.editBtn.Text = "Edit";
+            this.editBtn.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -196,26 +196,26 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Ingredients";
             // 
-            // Form1
+            // PizzaAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(255, 282);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.editBtn);
+            this.Controls.Add(this.submitBtn);
+            this.Controls.Add(this.jalaChkBox);
+            this.Controls.Add(this.olivesChkBox);
+            this.Controls.Add(this.mushChkBox);
+            this.Controls.Add(this.peppersChkBox);
+            this.Controls.Add(this.chickenChkBox);
+            this.Controls.Add(this.baconChkBox);
+            this.Controls.Add(this.hamChkBox);
+            this.Controls.Add(this.sausageChkBox);
+            this.Controls.Add(this.peppChkBox);
             this.Controls.Add(this.grpSauce);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PizzaAppForm";
+            this.Text = "Pizza App";
             this.grpSauce.ResumeLayout(false);
             this.grpSauce.PerformLayout();
             this.ResumeLayout(false);
@@ -224,20 +224,20 @@
         }
 
         #endregion
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton whiteRdoBtn;
+        private RadioButton redRdoBtn;
         private GroupBox grpSauce;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
-        private CheckBox checkBox5;
-        private CheckBox checkBox6;
-        private CheckBox checkBox7;
-        private CheckBox checkBox8;
-        private CheckBox checkBox9;
-        private Button button1;
-        private Button button2;
+        private CheckBox peppChkBox;
+        private CheckBox sausageChkBox;
+        private CheckBox hamChkBox;
+        private CheckBox baconChkBox;
+        private CheckBox chickenChkBox;
+        private CheckBox peppersChkBox;
+        private CheckBox mushChkBox;
+        private CheckBox olivesChkBox;
+        private CheckBox jalaChkBox;
+        private Button submitBtn;
+        private Button editBtn;
         private Label label1;
     }
 }
