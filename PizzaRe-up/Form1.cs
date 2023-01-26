@@ -6,5 +6,11 @@ namespace PizzaRe_up
         {
             InitializeComponent();
         }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            Edit editForm = new Edit();
+            editForm.ShowDialog();
+        }
     }
 }
