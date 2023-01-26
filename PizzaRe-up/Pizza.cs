@@ -11,26 +11,7 @@ namespace PizzaRe_up
         /// <summary>
         /// Ingredients for the pizza(s).
         /// </summary>
-        public string PepperoniIng { get; set; }
-
-        public string SausageIng { get; set; }
-
-        public string HamIng { get; set; }
-
-        public string BaconIng { get; set; }
-
-        public string ChickenIng { get; set; }
-
-        /// <summary>
-        /// Vegetables for the pizza(s).
-        /// </summary>
-        public string PeppersVg { get; set; }
-
-        public string MushroomsVg { get; set; }
-
-        public string OlivesVg { get; set; }
-
-        public string JalapenosVg { get; set; }
+        public string Ingredients { get; set; }
 
         /// <summary>
         /// Sauces for the pizza(s).
@@ -42,7 +23,7 @@ namespace PizzaRe_up
         /// <summary>
         /// Prices for the pizza(s).
         /// </summary>
-        public double price { get; set; }
+        public double Price { get; set; }
 
         /// <summary>
         /// The specialty pizza name(s).
