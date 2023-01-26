@@ -1,8 +1,8 @@
 namespace PizzaRe_up
 {
-    public partial class Form1 : Form
+    public partial class PizzaAppForm : Form
     {
-        public Form1()
+        public PizzaAppForm()
         {
             InitializeComponent();
         }
