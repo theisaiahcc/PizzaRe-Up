@@ -47,6 +47,7 @@
             this.radRegular = new System.Windows.Forms.RadioButton();
             this.radThick = new System.Windows.Forms.RadioButton();
             this.grpCrust = new System.Windows.Forms.GroupBox();
+            this.btnPreset = new System.Windows.Forms.Button();
             this.grpSauce.SuspendLayout();
             this.grpCrust.SuspendLayout();
             this.SuspendLayout();
@@ -247,11 +248,21 @@
             this.grpCrust.TabStop = false;
             this.grpCrust.Text = "Crust";
             // 
+            // btnPreset
+            // 
+            this.btnPreset.Location = new System.Drawing.Point(160, 285);
+            this.btnPreset.Name = "btnPreset";
+            this.btnPreset.Size = new System.Drawing.Size(75, 23);
+            this.btnPreset.TabIndex = 27;
+            this.btnPreset.Text = "Preset";
+            this.btnPreset.UseVisualStyleBackColor = true;
+            // 
             // PizzaAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 282);
+            this.ClientSize = new System.Drawing.Size(282, 320);
+            this.Controls.Add(this.btnPreset);
             this.Controls.Add(this.grpCrust);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEdit);
@@ -297,5 +308,6 @@
         private RadioButton radRegular;
         private RadioButton radThick;
         private GroupBox grpCrust;
+        private Button btnPreset;
     }
 }
