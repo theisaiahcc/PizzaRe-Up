@@ -62,6 +62,7 @@
             this.btnSelect.TabIndex = 0;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // btnCancel
             // 
@@ -71,6 +72,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtDescription
             // 
@@ -79,6 +81,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(146, 23);
             this.txtDescription.TabIndex = 0;
+            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // radMeatLover
             // 
@@ -90,6 +93,7 @@
             this.radMeatLover.TabStop = true;
             this.radMeatLover.Text = "Meat Lover";
             this.radMeatLover.UseVisualStyleBackColor = true;
+            this.radMeatLover.CheckedChanged += new System.EventHandler(this.radMeatLover_CheckedChanged);
             // 
             // radHawaiian
             // 
@@ -101,6 +105,7 @@
             this.radHawaiian.TabStop = true;
             this.radHawaiian.Text = "Hawaiian ";
             this.radHawaiian.UseVisualStyleBackColor = true;
+            this.radHawaiian.CheckedChanged += new System.EventHandler(this.radHawaiian_CheckedChanged);
             // 
             // radMemphisChicken
             // 
@@ -112,6 +117,7 @@
             this.radMemphisChicken.TabStop = true;
             this.radMemphisChicken.Text = "Memphis Chicken";
             this.radMemphisChicken.UseVisualStyleBackColor = true;
+            this.radMemphisChicken.CheckedChanged += new System.EventHandler(this.radMemphisChicken_CheckedChanged);
             // 
             // radVegan
             // 
@@ -123,6 +129,7 @@
             this.radVegan.TabStop = true;
             this.radVegan.Text = "Vegan";
             this.radVegan.UseVisualStyleBackColor = true;
+            this.radVegan.CheckedChanged += new System.EventHandler(this.radVegan_CheckedChanged);
             // 
             // radSupreme
             // 
@@ -134,6 +141,7 @@
             this.radSupreme.TabStop = true;
             this.radSupreme.Text = "Supreme";
             this.radSupreme.UseVisualStyleBackColor = true;
+            this.radSupreme.CheckedChanged += new System.EventHandler(this.radSupreme_CheckedChanged);
             // 
             // Preset
             // 
