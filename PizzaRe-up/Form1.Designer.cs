@@ -43,7 +43,12 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.radThin = new System.Windows.Forms.RadioButton();
+            this.radRegular = new System.Windows.Forms.RadioButton();
+            this.radThick = new System.Windows.Forms.RadioButton();
+            this.grpCrust = new System.Windows.Forms.GroupBox();
             this.grpSauce.SuspendLayout();
+            this.grpCrust.SuspendLayout();
             this.SuspendLayout();
             // 
             // radWhiteSauce
@@ -72,7 +77,7 @@
             // 
             this.grpSauce.Controls.Add(this.radWhiteSauce);
             this.grpSauce.Controls.Add(this.radRedSauce);
-            this.grpSauce.Location = new System.Drawing.Point(124, 12);
+            this.grpSauce.Location = new System.Drawing.Point(125, 14);
             this.grpSauce.Name = "grpSauce";
             this.grpSauce.Size = new System.Drawing.Size(110, 78);
             this.grpSauce.TabIndex = 5;
@@ -171,7 +176,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(159, 196);
+            this.btnSubmit.Location = new System.Drawing.Point(160, 218);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 20;
@@ -180,7 +185,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(159, 234);
+            this.btnEdit.Location = new System.Drawing.Point(160, 247);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 21;
@@ -197,11 +202,57 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Ingredients";
             // 
+            // radThin
+            // 
+            this.radThin.AutoSize = true;
+            this.radThin.Location = new System.Drawing.Point(6, 22);
+            this.radThin.Name = "radThin";
+            this.radThin.Size = new System.Drawing.Size(48, 19);
+            this.radThin.TabIndex = 23;
+            this.radThin.TabStop = true;
+            this.radThin.Text = "Thin";
+            this.radThin.UseVisualStyleBackColor = true;
+            // 
+            // radRegular
+            // 
+            this.radRegular.AutoSize = true;
+            this.radRegular.Location = new System.Drawing.Point(6, 47);
+            this.radRegular.Name = "radRegular";
+            this.radRegular.Size = new System.Drawing.Size(65, 19);
+            this.radRegular.TabIndex = 24;
+            this.radRegular.TabStop = true;
+            this.radRegular.Text = "Regular";
+            this.radRegular.UseVisualStyleBackColor = true;
+            // 
+            // radThick
+            // 
+            this.radThick.AutoSize = true;
+            this.radThick.Location = new System.Drawing.Point(6, 72);
+            this.radThick.Name = "radThick";
+            this.radThick.Size = new System.Drawing.Size(53, 19);
+            this.radThick.TabIndex = 25;
+            this.radThick.TabStop = true;
+            this.radThick.Text = "Thick";
+            this.radThick.UseVisualStyleBackColor = true;
+            // 
+            // grpCrust
+            // 
+            this.grpCrust.Controls.Add(this.radThin);
+            this.grpCrust.Controls.Add(this.radThick);
+            this.grpCrust.Controls.Add(this.radRegular);
+            this.grpCrust.Location = new System.Drawing.Point(125, 101);
+            this.grpCrust.Name = "grpCrust";
+            this.grpCrust.Size = new System.Drawing.Size(110, 98);
+            this.grpCrust.TabIndex = 26;
+            this.grpCrust.TabStop = false;
+            this.grpCrust.Text = "Crust";
+            // 
             // PizzaAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(255, 282);
+            this.Controls.Add(this.grpCrust);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSubmit);
@@ -219,6 +270,8 @@
             this.Text = "Pizza App";
             this.grpSauce.ResumeLayout(false);
             this.grpSauce.PerformLayout();
+            this.grpCrust.ResumeLayout(false);
+            this.grpCrust.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +293,9 @@
         private Button btnSubmit;
         private Button btnEdit;
         private Label label1;
+        private RadioButton radThin;
+        private RadioButton radRegular;
+        private RadioButton radThick;
+        private GroupBox grpCrust;
     }
 }
