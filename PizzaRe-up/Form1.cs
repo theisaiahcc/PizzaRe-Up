@@ -12,5 +12,11 @@ namespace PizzaRe_up
             Edit editForm = new Edit();
             editForm.ShowDialog();
         }
+
+        private void btnPreset_Click(object sender, EventArgs e)
+        {
+            Preset presetForm = new Preset();
+            presetForm.ShowDialog();
+        }
     }
 }

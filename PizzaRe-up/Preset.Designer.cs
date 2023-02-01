@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grpSpecial = new System.Windows.Forms.GroupBox();
+            this.radSupreme = new System.Windows.Forms.RadioButton();
+            this.radVegan = new System.Windows.Forms.RadioButton();
+            this.radMemphisChicken = new System.Windows.Forms.RadioButton();
+            this.radHawaiian = new System.Windows.Forms.RadioButton();
+            this.radMeatLover = new System.Windows.Forms.RadioButton();
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.radMeatLover = new System.Windows.Forms.RadioButton();
-            this.radHawaiian = new System.Windows.Forms.RadioButton();
-            this.radMemphisChicken = new System.Windows.Forms.RadioButton();
-            this.radVegan = new System.Windows.Forms.RadioButton();
-            this.radSupreme = new System.Windows.Forms.RadioButton();
             this.grpSpecial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,64 +54,16 @@
             this.grpSpecial.TabStop = false;
             this.grpSpecial.Text = "SpecialtyPizzas";
             // 
-            // btnSelect
+            // radSupreme
             // 
-            this.btnSelect.Location = new System.Drawing.Point(12, 209);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(103, 40);
-            this.btnSelect.TabIndex = 0;
-            this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(164, 209);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 40);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Enabled = false;
-            this.txtDescription.Location = new System.Drawing.Point(70, 154);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(146, 23);
-            this.txtDescription.TabIndex = 0;
-            // 
-            // radMeatLover
-            // 
-            this.radMeatLover.AutoSize = true;
-            this.radMeatLover.Location = new System.Drawing.Point(3, 19);
-            this.radMeatLover.Name = "radMeatLover";
-            this.radMeatLover.Size = new System.Drawing.Size(84, 19);
-            this.radMeatLover.TabIndex = 0;
-            this.radMeatLover.TabStop = true;
-            this.radMeatLover.Text = "Meat Lover";
-            this.radMeatLover.UseVisualStyleBackColor = true;
-            // 
-            // radHawaiian
-            // 
-            this.radHawaiian.AutoSize = true;
-            this.radHawaiian.Location = new System.Drawing.Point(3, 42);
-            this.radHawaiian.Name = "radHawaiian";
-            this.radHawaiian.Size = new System.Drawing.Size(77, 19);
-            this.radHawaiian.TabIndex = 1;
-            this.radHawaiian.TabStop = true;
-            this.radHawaiian.Text = "Hawaiian ";
-            this.radHawaiian.UseVisualStyleBackColor = true;
-            // 
-            // radMemphisChicken
-            // 
-            this.radMemphisChicken.AutoSize = true;
-            this.radMemphisChicken.Location = new System.Drawing.Point(3, 65);
-            this.radMemphisChicken.Name = "radMemphisChicken";
-            this.radMemphisChicken.Size = new System.Drawing.Size(121, 19);
-            this.radMemphisChicken.TabIndex = 2;
-            this.radMemphisChicken.TabStop = true;
-            this.radMemphisChicken.Text = "Memphis Chicken";
-            this.radMemphisChicken.UseVisualStyleBackColor = true;
+            this.radSupreme.AutoSize = true;
+            this.radSupreme.Location = new System.Drawing.Point(3, 111);
+            this.radSupreme.Name = "radSupreme";
+            this.radSupreme.Size = new System.Drawing.Size(72, 19);
+            this.radSupreme.TabIndex = 4;
+            this.radSupreme.TabStop = true;
+            this.radSupreme.Text = "Supreme";
+            this.radSupreme.UseVisualStyleBackColor = true;
             // 
             // radVegan
             // 
@@ -124,22 +76,71 @@
             this.radVegan.Text = "Vegan";
             this.radVegan.UseVisualStyleBackColor = true;
             // 
-            // radSupreme
+            // radMemphisChicken
             // 
-            this.radSupreme.AutoSize = true;
-            this.radSupreme.Location = new System.Drawing.Point(3, 111);
-            this.radSupreme.Name = "radSupreme";
-            this.radSupreme.Size = new System.Drawing.Size(72, 19);
-            this.radSupreme.TabIndex = 4;
-            this.radSupreme.TabStop = true;
-            this.radSupreme.Text = "Supreme";
-            this.radSupreme.UseVisualStyleBackColor = true;
+            this.radMemphisChicken.AutoSize = true;
+            this.radMemphisChicken.Location = new System.Drawing.Point(3, 65);
+            this.radMemphisChicken.Name = "radMemphisChicken";
+            this.radMemphisChicken.Size = new System.Drawing.Size(121, 19);
+            this.radMemphisChicken.TabIndex = 2;
+            this.radMemphisChicken.TabStop = true;
+            this.radMemphisChicken.Text = "Memphis Chicken";
+            this.radMemphisChicken.UseVisualStyleBackColor = true;
+            // 
+            // radHawaiian
+            // 
+            this.radHawaiian.AutoSize = true;
+            this.radHawaiian.Location = new System.Drawing.Point(3, 42);
+            this.radHawaiian.Name = "radHawaiian";
+            this.radHawaiian.Size = new System.Drawing.Size(77, 19);
+            this.radHawaiian.TabIndex = 1;
+            this.radHawaiian.TabStop = true;
+            this.radHawaiian.Text = "Hawaiian ";
+            this.radHawaiian.UseVisualStyleBackColor = true;
+            // 
+            // radMeatLover
+            // 
+            this.radMeatLover.AutoSize = true;
+            this.radMeatLover.Location = new System.Drawing.Point(3, 19);
+            this.radMeatLover.Name = "radMeatLover";
+            this.radMeatLover.Size = new System.Drawing.Size(84, 19);
+            this.radMeatLover.TabIndex = 0;
+            this.radMeatLover.TabStop = true;
+            this.radMeatLover.Text = "Meat Lover";
+            this.radMeatLover.UseVisualStyleBackColor = true;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(15, 206);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(103, 40);
+            this.btnSelect.TabIndex = 0;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(164, 206);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(99, 40);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Enabled = false;
+            this.txtDescription.Location = new System.Drawing.Point(12, 168);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(251, 23);
+            this.txtDescription.TabIndex = 0;
             // 
             // Preset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 295);
+            this.ClientSize = new System.Drawing.Size(275, 258);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnCancel);
