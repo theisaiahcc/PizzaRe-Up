@@ -16,19 +16,11 @@ namespace PizzaRe_up
         /// <summary>
         /// Sauces for the pizza(s).
         /// </summary>
-        public string RedSauce { get; set; }
-
-        public string WhiteSauce { get; set; }
+        public string Sauces { get; set; }
 
         /// <summary>
         /// Prices for the pizza(s).
         /// </summary>
         public double Price { get; set; }
-
-        /// <summary>
-        /// The specialty pizza name(s).
-        /// </summary>
-        public string PizzaNames { get; set; }
-
     }
 }
