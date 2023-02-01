@@ -27,11 +27,6 @@ namespace PizzaRe_up
 
         }
 
-        private void txtDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void radMeatLover_CheckedChanged(object sender, EventArgs e)
         {
             radio_CheckedChanged();
