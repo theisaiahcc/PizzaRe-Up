@@ -59,13 +59,13 @@
             this.radWhiteSauce.Name = "radWhiteSauce";
             this.radWhiteSauce.Size = new System.Drawing.Size(56, 19);
             this.radWhiteSauce.TabIndex = 3;
-            this.radWhiteSauce.TabStop = true;
             this.radWhiteSauce.Text = "White";
             this.radWhiteSauce.UseVisualStyleBackColor = true;
             // 
             // radRedSauce
             // 
             this.radRedSauce.AutoSize = true;
+            this.radRedSauce.Checked = true;
             this.radRedSauce.Location = new System.Drawing.Point(6, 47);
             this.radRedSauce.Name = "radRedSauce";
             this.radRedSauce.Size = new System.Drawing.Size(45, 19);
@@ -177,7 +177,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(160, 218);
+            this.btnSubmit.Location = new System.Drawing.Point(143, 234);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 20;
@@ -186,7 +186,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(160, 247);
+            this.btnEdit.Location = new System.Drawing.Point(143, 263);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 21;
@@ -210,13 +210,13 @@
             this.radThin.Name = "radThin";
             this.radThin.Size = new System.Drawing.Size(48, 19);
             this.radThin.TabIndex = 23;
-            this.radThin.TabStop = true;
             this.radThin.Text = "Thin";
             this.radThin.UseVisualStyleBackColor = true;
             // 
             // radRegular
             // 
             this.radRegular.AutoSize = true;
+            this.radRegular.Checked = true;
             this.radRegular.Location = new System.Drawing.Point(6, 47);
             this.radRegular.Name = "radRegular";
             this.radRegular.Size = new System.Drawing.Size(65, 19);
@@ -232,7 +232,6 @@
             this.radThick.Name = "radThick";
             this.radThick.Size = new System.Drawing.Size(53, 19);
             this.radThick.TabIndex = 25;
-            this.radThick.TabStop = true;
             this.radThick.Text = "Thick";
             this.radThick.UseVisualStyleBackColor = true;
             // 
@@ -250,12 +249,13 @@
             // 
             // btnPreset
             // 
-            this.btnPreset.Location = new System.Drawing.Point(160, 285);
+            this.btnPreset.Location = new System.Drawing.Point(143, 205);
             this.btnPreset.Name = "btnPreset";
             this.btnPreset.Size = new System.Drawing.Size(75, 23);
             this.btnPreset.TabIndex = 27;
             this.btnPreset.Text = "Preset";
             this.btnPreset.UseVisualStyleBackColor = true;
+            this.btnPreset.Click += new System.EventHandler(this.btnPreset_Click);
             // 
             // PizzaAppForm
             // 
