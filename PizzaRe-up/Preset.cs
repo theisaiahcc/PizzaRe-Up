@@ -24,7 +24,7 @@ namespace PizzaRe_up
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void radMeatLover_CheckedChanged(object sender, EventArgs e)
