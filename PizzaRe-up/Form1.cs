@@ -12,5 +12,10 @@ namespace PizzaRe_up
             Edit editForm = new Edit();
             editForm.ShowDialog();
         }
+
+        private void PizzaAppForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
