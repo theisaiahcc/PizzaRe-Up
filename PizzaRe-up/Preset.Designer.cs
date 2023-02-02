@@ -64,6 +64,7 @@
             this.radSupreme.TabStop = true;
             this.radSupreme.Text = "Supreme";
             this.radSupreme.UseVisualStyleBackColor = true;
+            this.radSupreme.CheckedChanged += new System.EventHandler(this.radSupreme_CheckedChanged);
             // 
             // radVegan
             // 
@@ -75,6 +76,63 @@
             this.radVegan.TabStop = true;
             this.radVegan.Text = "Vegan";
             this.radVegan.UseVisualStyleBackColor = true;
+            this.radVegan.CheckedChanged += new System.EventHandler(this.radVegan_CheckedChanged);
+            // 
+            // radMemphisChicken
+            // 
+            this.radMemphisChicken.AutoSize = true;
+            this.radMemphisChicken.Location = new System.Drawing.Point(3, 65);
+            this.radMemphisChicken.Name = "radMemphisChicken";
+            this.radMemphisChicken.Size = new System.Drawing.Size(121, 19);
+            this.radMemphisChicken.TabIndex = 2;
+            this.radMemphisChicken.TabStop = true;
+            this.radMemphisChicken.Text = "Memphis Chicken";
+            this.radMemphisChicken.UseVisualStyleBackColor = true;
+            this.radMemphisChicken.CheckedChanged += new System.EventHandler(this.radMemphisChicken_CheckedChanged);
+            // 
+            // radHawaiian
+            // 
+            this.radHawaiian.AutoSize = true;
+            this.radHawaiian.Location = new System.Drawing.Point(3, 42);
+            this.radHawaiian.Name = "radHawaiian";
+            this.radHawaiian.Size = new System.Drawing.Size(77, 19);
+            this.radHawaiian.TabIndex = 1;
+            this.radHawaiian.TabStop = true;
+            this.radHawaiian.Text = "Hawaiian ";
+            this.radHawaiian.UseVisualStyleBackColor = true;
+            this.radHawaiian.CheckedChanged += new System.EventHandler(this.radHawaiian_CheckedChanged);
+            // 
+            // radMeatLover
+            // 
+            this.radMeatLover.AutoSize = true;
+            this.radMeatLover.Location = new System.Drawing.Point(3, 19);
+            this.radMeatLover.Name = "radMeatLover";
+            this.radMeatLover.Size = new System.Drawing.Size(84, 19);
+            this.radMeatLover.TabIndex = 0;
+            this.radMeatLover.TabStop = true;
+            this.radMeatLover.Text = "Meat Lover";
+            this.radMeatLover.UseVisualStyleBackColor = true;
+            this.radMeatLover.CheckedChanged += new System.EventHandler(this.radMeatLover_CheckedChanged);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(12, 209);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(103, 40);
+            this.btnSelect.TabIndex = 0;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // radVegan
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(164, 209);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(99, 40);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // radMemphisChicken
             // 
@@ -117,16 +175,7 @@
             this.btnSelect.TabIndex = 0;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(164, 206);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 40);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+
             // 
             // txtDescription
             // 

@@ -18,5 +18,10 @@ namespace PizzaRe_up
             Preset presetForm = new Preset();
             presetForm.ShowDialog();
         }
+
+        private void PizzaAppForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
