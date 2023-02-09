@@ -16,7 +16,7 @@ namespace PizzaRe_up
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trusted_Connection=True");
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=PizzaRe-up;Trusted_Connection=True");
         }
 
         public DbSet<Pizza> Pizzas { get; set; }
