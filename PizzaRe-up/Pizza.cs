@@ -28,5 +28,15 @@ namespace PizzaRe_up
         public string Crust { get; set; }
 
         public char Size { get; set; }
+
+        public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size)
+        {
+            
+        }
+
+        public Pizza()
+        {
+
+        }
     }
 }
