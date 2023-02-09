@@ -47,10 +47,15 @@
             this.radThick = new System.Windows.Forms.RadioButton();
             this.grpCrust = new System.Windows.Forms.GroupBox();
             this.btnPreset = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpIngredients = new System.Windows.Forms.GroupBox();
+            this.grpPizzaSizes = new System.Windows.Forms.GroupBox();
+            this.radSmallSize = new System.Windows.Forms.RadioButton();
+            this.radMediumSize = new System.Windows.Forms.RadioButton();
+            this.radLargeSize = new System.Windows.Forms.RadioButton();
             this.grpSauce.SuspendLayout();
             this.grpCrust.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpIngredients.SuspendLayout();
+            this.grpPizzaSizes.SuspendLayout();
             this.SuspendLayout();
             // 
             // radWhiteSauce
@@ -79,7 +84,7 @@
             // 
             this.grpSauce.Controls.Add(this.radWhiteSauce);
             this.grpSauce.Controls.Add(this.radRedSauce);
-            this.grpSauce.Location = new System.Drawing.Point(143, 14);
+            this.grpSauce.Location = new System.Drawing.Point(143, 7);
             this.grpSauce.Name = "grpSauce";
             this.grpSauce.Size = new System.Drawing.Size(110, 78);
             this.grpSauce.TabIndex = 5;
@@ -178,7 +183,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(149, 205);
+            this.btnSubmit.Location = new System.Drawing.Point(8, 292);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 20;
@@ -187,7 +192,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(149, 263);
+            this.btnEdit.Location = new System.Drawing.Point(8, 350);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(121, 23);
             this.btnEdit.TabIndex = 21;
@@ -232,7 +237,7 @@
             this.grpCrust.Controls.Add(this.radThin);
             this.grpCrust.Controls.Add(this.radThick);
             this.grpCrust.Controls.Add(this.radRegular);
-            this.grpCrust.Location = new System.Drawing.Point(143, 101);
+            this.grpCrust.Location = new System.Drawing.Point(143, 91);
             this.grpCrust.Name = "grpCrust";
             this.grpCrust.Size = new System.Drawing.Size(110, 98);
             this.grpCrust.TabIndex = 26;
@@ -241,7 +246,7 @@
             // 
             // btnPreset
             // 
-            this.btnPreset.Location = new System.Drawing.Point(149, 234);
+            this.btnPreset.Location = new System.Drawing.Point(8, 321);
             this.btnPreset.Name = "btnPreset";
             this.btnPreset.Size = new System.Drawing.Size(121, 23);
             this.btnPreset.TabIndex = 27;
@@ -249,30 +254,77 @@
             this.btnPreset.UseVisualStyleBackColor = true;
             this.btnPreset.Click += new System.EventHandler(this.btnPreset_Click);
             // 
-            // groupBox1
+            // grpIngredients
             // 
-            this.groupBox1.Controls.Add(this.chkJalapenos);
-            this.groupBox1.Controls.Add(this.chkPepperoni);
-            this.groupBox1.Controls.Add(this.chkSausage);
-            this.groupBox1.Controls.Add(this.chkHam);
-            this.groupBox1.Controls.Add(this.chkBacon);
-            this.groupBox1.Controls.Add(this.chkChicken);
-            this.groupBox1.Controls.Add(this.chkPeppers);
-            this.groupBox1.Controls.Add(this.chkOlives);
-            this.groupBox1.Controls.Add(this.chkMushrooms);
-            this.groupBox1.Location = new System.Drawing.Point(8, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(117, 272);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ingredients";
+            this.grpIngredients.Controls.Add(this.chkJalapenos);
+            this.grpIngredients.Controls.Add(this.chkPepperoni);
+            this.grpIngredients.Controls.Add(this.chkSausage);
+            this.grpIngredients.Controls.Add(this.chkHam);
+            this.grpIngredients.Controls.Add(this.chkBacon);
+            this.grpIngredients.Controls.Add(this.chkChicken);
+            this.grpIngredients.Controls.Add(this.chkPeppers);
+            this.grpIngredients.Controls.Add(this.chkOlives);
+            this.grpIngredients.Controls.Add(this.chkMushrooms);
+            this.grpIngredients.Location = new System.Drawing.Point(8, 14);
+            this.grpIngredients.Name = "grpIngredients";
+            this.grpIngredients.Size = new System.Drawing.Size(117, 272);
+            this.grpIngredients.TabIndex = 28;
+            this.grpIngredients.TabStop = false;
+            this.grpIngredients.Text = "Ingredients";
+            // 
+            // grpPizzaSizes
+            // 
+            this.grpPizzaSizes.Controls.Add(this.radLargeSize);
+            this.grpPizzaSizes.Controls.Add(this.radMediumSize);
+            this.grpPizzaSizes.Controls.Add(this.radSmallSize);
+            this.grpPizzaSizes.Location = new System.Drawing.Point(147, 195);
+            this.grpPizzaSizes.Name = "grpPizzaSizes";
+            this.grpPizzaSizes.Size = new System.Drawing.Size(117, 103);
+            this.grpPizzaSizes.TabIndex = 29;
+            this.grpPizzaSizes.TabStop = false;
+            this.grpPizzaSizes.Text = "Pizza Sizes";
+            this.grpPizzaSizes.Enter += new System.EventHandler(this.PizzaAppForm_Load);
+            // 
+            // radSmallSize
+            // 
+            this.radSmallSize.AutoSize = true;
+            this.radSmallSize.Location = new System.Drawing.Point(2, 22);
+            this.radSmallSize.Name = "radSmallSize";
+            this.radSmallSize.Size = new System.Drawing.Size(54, 19);
+            this.radSmallSize.TabIndex = 0;
+            this.radSmallSize.TabStop = true;
+            this.radSmallSize.Text = "Small";
+            this.radSmallSize.UseVisualStyleBackColor = true;
+            // 
+            // radMediumSize
+            // 
+            this.radMediumSize.AutoSize = true;
+            this.radMediumSize.Location = new System.Drawing.Point(2, 47);
+            this.radMediumSize.Name = "radMediumSize";
+            this.radMediumSize.Size = new System.Drawing.Size(70, 19);
+            this.radMediumSize.TabIndex = 1;
+            this.radMediumSize.TabStop = true;
+            this.radMediumSize.Text = "Medium";
+            this.radMediumSize.UseVisualStyleBackColor = true;
+            // 
+            // radLargeSize
+            // 
+            this.radLargeSize.AutoSize = true;
+            this.radLargeSize.Location = new System.Drawing.Point(2, 72);
+            this.radLargeSize.Name = "radLargeSize";
+            this.radLargeSize.Size = new System.Drawing.Size(54, 19);
+            this.radLargeSize.TabIndex = 2;
+            this.radLargeSize.TabStop = true;
+            this.radLargeSize.Text = "Large";
+            this.radLargeSize.UseVisualStyleBackColor = true;
             // 
             // PizzaAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 320);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(274, 385);
+            this.Controls.Add(this.grpPizzaSizes);
+            this.Controls.Add(this.grpIngredients);
             this.Controls.Add(this.btnPreset);
             this.Controls.Add(this.grpCrust);
             this.Controls.Add(this.btnEdit);
@@ -284,8 +336,10 @@
             this.grpSauce.PerformLayout();
             this.grpCrust.ResumeLayout(false);
             this.grpCrust.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpIngredients.ResumeLayout(false);
+            this.grpIngredients.PerformLayout();
+            this.grpPizzaSizes.ResumeLayout(false);
+            this.grpPizzaSizes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +364,10 @@
         private RadioButton radThick;
         private GroupBox grpCrust;
         private Button btnPreset;
-        private GroupBox groupBox1;
+        private GroupBox grpIngredients;
+        private GroupBox grpPizzaSizes;
+        private RadioButton radLargeSize;
+        private RadioButton radMediumSize;
+        private RadioButton radSmallSize;
     }
 }
