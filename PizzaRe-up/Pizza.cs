@@ -24,5 +24,9 @@ namespace PizzaRe_up
         /// Prices for the pizza(s).
         /// </summary>
         public double Price { get; set; }
+
+        public string Crust { get; set; }
+
+        public char Size { get; set; }
     }
 }
