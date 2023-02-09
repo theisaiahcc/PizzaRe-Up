@@ -9,10 +9,22 @@ namespace PizzaRe_up
 {
     public class Pizza
     {
+        public Pizza(int PizzaId, string Ingredients, string Sauces, double Price, string Crust, char Size)
+        {
+            this.PizzaId = PizzaId;
+            this.Ingredients = Ingredients;
+            this.Sauces = Sauces;
+            this.Price = Price;
+            this.Crust = Crust;
+            this.Size = Size;
+        }
+
         /// <summary>
         /// Ingredients for the pizza(s).
         /// </summary>
         [Key]
+        public int PizzaId { get; set; }
+
         public string Ingredients { get; set; }
 
         /// <summary>
@@ -28,15 +40,5 @@ namespace PizzaRe_up
         public string Crust { get; set; }
 
         public char Size { get; set; }
-
-        public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size)
-        {
-            
-        }
-
-        public Pizza()
-        {
-
-        }
     }
 }
