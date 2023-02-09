@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace PizzaRe_up
         /// <summary>
         /// Ingredients for the pizza(s).
         /// </summary>
+        [Key]
         public string Ingredients { get; set; }
 
         /// <summary>
