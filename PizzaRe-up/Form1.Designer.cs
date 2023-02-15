@@ -293,13 +293,13 @@
             this.radLargeSize.Name = "radLargeSize";
             this.radLargeSize.Size = new System.Drawing.Size(54, 19);
             this.radLargeSize.TabIndex = 2;
-            this.radLargeSize.TabStop = true;
             this.radLargeSize.Text = "Large";
             this.radLargeSize.UseVisualStyleBackColor = true;
             // 
             // radMediumSize
             // 
             this.radMediumSize.AutoSize = true;
+            this.radMediumSize.Checked = true;
             this.radMediumSize.Location = new System.Drawing.Point(2, 47);
             this.radMediumSize.Name = "radMediumSize";
             this.radMediumSize.Size = new System.Drawing.Size(70, 19);
@@ -315,7 +315,6 @@
             this.radSmallSize.Name = "radSmallSize";
             this.radSmallSize.Size = new System.Drawing.Size(54, 19);
             this.radSmallSize.TabIndex = 0;
-            this.radSmallSize.TabStop = true;
             this.radSmallSize.Text = "Small";
             this.radSmallSize.UseVisualStyleBackColor = true;
             // 
