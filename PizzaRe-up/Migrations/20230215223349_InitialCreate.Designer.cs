@@ -11,8 +11,8 @@ using PizzaRe_up;
 namespace PizzaReup.Migrations
 {
     [DbContext(typeof(PizzaContext))]
-    [Migration("20230209041207_Initial")]
-    partial class Initial
+    [Migration("20230215223349_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,11 +28,17 @@ namespace PizzaReup.Migrations
                 {
                     b.Property<int>("PizzaId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("PizzaId")
+                        .HasColumnOrder(1);
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PizzaId"));
 
                     b.Property<string>("Crust")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

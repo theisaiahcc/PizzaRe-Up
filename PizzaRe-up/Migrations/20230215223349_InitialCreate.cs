@@ -14,13 +14,18 @@ namespace PizzaReup.Migrations
                 name: "Pizzas",
                 columns: table => new
                 {
-                    Ingredients = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PizzaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Ingredients = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sauces = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<double>(type: "float", nullable: false)
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    Crust = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Size = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pizzas", x => x.Ingredients);
+                    table.PrimaryKey("PK_Pizzas", x => x.PizzaId);
                 });
         }
 
