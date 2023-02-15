@@ -91,7 +91,7 @@ namespace PizzaRe_up
                 price += 2;
             }
             
-            Pizza p = new Pizza(ingredients, sauce, price, crust, size);
+            Pizza p = new Pizza(ingredients, sauce, price, crust, size, "Isaiah");
             DbContext.Pizzas.Add(p);
             DbContext.SaveChanges();
 
