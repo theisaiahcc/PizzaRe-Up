@@ -41,5 +41,7 @@ namespace PizzaRe_up
         public string Crust { get; set; }
 
         public char Size { get; set; }
+
+        public string CustomerName { get; set; }
     }
 }
