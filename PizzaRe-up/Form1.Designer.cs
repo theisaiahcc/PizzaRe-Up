@@ -44,14 +44,14 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.radThin = new System.Windows.Forms.RadioButton();
             this.radRegular = new System.Windows.Forms.RadioButton();
-            this.radThick = new System.Windows.Forms.RadioButton();
+            this.radStuffed = new System.Windows.Forms.RadioButton();
             this.grpCrust = new System.Windows.Forms.GroupBox();
             this.btnPreset = new System.Windows.Forms.Button();
             this.grpIngredients = new System.Windows.Forms.GroupBox();
             this.grpPizzaSizes = new System.Windows.Forms.GroupBox();
-            this.radSmallSize = new System.Windows.Forms.RadioButton();
-            this.radMediumSize = new System.Windows.Forms.RadioButton();
             this.radLargeSize = new System.Windows.Forms.RadioButton();
+            this.radMediumSize = new System.Windows.Forms.RadioButton();
+            this.radSmallSize = new System.Windows.Forms.RadioButton();
             this.grpSauce.SuspendLayout();
             this.grpCrust.SuspendLayout();
             this.grpIngredients.SuspendLayout();
@@ -189,6 +189,7 @@
             this.btnSubmit.TabIndex = 20;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnEdit
             // 
@@ -222,20 +223,20 @@
             this.radRegular.Text = "Regular";
             this.radRegular.UseVisualStyleBackColor = true;
             // 
-            // radThick
+            // radStuffed
             // 
-            this.radThick.AutoSize = true;
-            this.radThick.Location = new System.Drawing.Point(6, 72);
-            this.radThick.Name = "radThick";
-            this.radThick.Size = new System.Drawing.Size(53, 19);
-            this.radThick.TabIndex = 25;
-            this.radThick.Text = "Thick";
-            this.radThick.UseVisualStyleBackColor = true;
+            this.radStuffed.AutoSize = true;
+            this.radStuffed.Location = new System.Drawing.Point(6, 72);
+            this.radStuffed.Name = "radStuffed";
+            this.radStuffed.Size = new System.Drawing.Size(63, 19);
+            this.radStuffed.TabIndex = 25;
+            this.radStuffed.Text = "Stuffed";
+            this.radStuffed.UseVisualStyleBackColor = true;
             // 
             // grpCrust
             // 
             this.grpCrust.Controls.Add(this.radThin);
-            this.grpCrust.Controls.Add(this.radThick);
+            this.grpCrust.Controls.Add(this.radStuffed);
             this.grpCrust.Controls.Add(this.radRegular);
             this.grpCrust.Location = new System.Drawing.Point(143, 91);
             this.grpCrust.Name = "grpCrust";
@@ -285,16 +286,16 @@
             this.grpPizzaSizes.Text = "Pizza Sizes";
             this.grpPizzaSizes.Enter += new System.EventHandler(this.PizzaAppForm_Load);
             // 
-            // radSmallSize
+            // radLargeSize
             // 
-            this.radSmallSize.AutoSize = true;
-            this.radSmallSize.Location = new System.Drawing.Point(2, 22);
-            this.radSmallSize.Name = "radSmallSize";
-            this.radSmallSize.Size = new System.Drawing.Size(54, 19);
-            this.radSmallSize.TabIndex = 0;
-            this.radSmallSize.TabStop = true;
-            this.radSmallSize.Text = "Small";
-            this.radSmallSize.UseVisualStyleBackColor = true;
+            this.radLargeSize.AutoSize = true;
+            this.radLargeSize.Location = new System.Drawing.Point(2, 72);
+            this.radLargeSize.Name = "radLargeSize";
+            this.radLargeSize.Size = new System.Drawing.Size(54, 19);
+            this.radLargeSize.TabIndex = 2;
+            this.radLargeSize.TabStop = true;
+            this.radLargeSize.Text = "Large";
+            this.radLargeSize.UseVisualStyleBackColor = true;
             // 
             // radMediumSize
             // 
@@ -307,16 +308,16 @@
             this.radMediumSize.Text = "Medium";
             this.radMediumSize.UseVisualStyleBackColor = true;
             // 
-            // radLargeSize
+            // radSmallSize
             // 
-            this.radLargeSize.AutoSize = true;
-            this.radLargeSize.Location = new System.Drawing.Point(2, 72);
-            this.radLargeSize.Name = "radLargeSize";
-            this.radLargeSize.Size = new System.Drawing.Size(54, 19);
-            this.radLargeSize.TabIndex = 2;
-            this.radLargeSize.TabStop = true;
-            this.radLargeSize.Text = "Large";
-            this.radLargeSize.UseVisualStyleBackColor = true;
+            this.radSmallSize.AutoSize = true;
+            this.radSmallSize.Location = new System.Drawing.Point(2, 22);
+            this.radSmallSize.Name = "radSmallSize";
+            this.radSmallSize.Size = new System.Drawing.Size(54, 19);
+            this.radSmallSize.TabIndex = 0;
+            this.radSmallSize.TabStop = true;
+            this.radSmallSize.Text = "Small";
+            this.radSmallSize.UseVisualStyleBackColor = true;
             // 
             // PizzaAppForm
             // 
@@ -361,7 +362,7 @@
         private Button btnEdit;
         private RadioButton radThin;
         private RadioButton radRegular;
-        private RadioButton radThick;
+        private RadioButton radStuffed;
         private GroupBox grpCrust;
         private Button btnPreset;
         private GroupBox grpIngredients;
