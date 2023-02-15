@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,8 @@ namespace PizzaRe_up
 {
     public class Pizza
     {
-        public Pizza(int PizzaId, string Ingredients, string Sauces, double Price, string Crust, char Size)
+        public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size)
         {
-            this.PizzaId = PizzaId;
             this.Ingredients = Ingredients;
             this.Sauces = Sauces;
             this.Price = Price;
@@ -23,6 +23,7 @@ namespace PizzaRe_up
         /// Ingredients for the pizza(s).
         /// </summary>
         [Key]
+        [Column("PizzaId", Order = 1)]
         public int PizzaId { get; set; }
 
         public string Ingredients { get; set; }
