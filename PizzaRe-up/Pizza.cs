@@ -10,13 +10,14 @@ namespace PizzaRe_up
 {
     public class Pizza
     {
-        public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size)
+        public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size, string customerName)
         {
             this.Ingredients = Ingredients;
             this.Sauces = Sauces;
             this.Price = Price;
             this.Crust = Crust;
             this.Size = Size;
+            CustomerName = customerName;
         }
 
         /// <summary>
