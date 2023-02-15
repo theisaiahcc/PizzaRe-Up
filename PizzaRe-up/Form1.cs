@@ -32,7 +32,7 @@ namespace PizzaRe_up
         {
             using PizzaContext DbContext = new();
             // come back
-            string ingredients = "cheese";
+            string ingredients = "Cheese";
             double price = 0;
             foreach (Control control in grpIngredients.Controls)
             {
