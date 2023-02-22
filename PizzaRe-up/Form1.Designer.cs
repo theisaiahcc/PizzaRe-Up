@@ -52,6 +52,8 @@
             this.radLargeSize = new System.Windows.Forms.RadioButton();
             this.radMediumSize = new System.Windows.Forms.RadioButton();
             this.radSmallSize = new System.Windows.Forms.RadioButton();
+            this.txtOrderName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grpSauce.SuspendLayout();
             this.grpCrust.SuspendLayout();
             this.grpIngredients.SuspendLayout();
@@ -84,7 +86,7 @@
             // 
             this.grpSauce.Controls.Add(this.radWhiteSauce);
             this.grpSauce.Controls.Add(this.radRedSauce);
-            this.grpSauce.Location = new System.Drawing.Point(143, 7);
+            this.grpSauce.Location = new System.Drawing.Point(141, 14);
             this.grpSauce.Name = "grpSauce";
             this.grpSauce.Size = new System.Drawing.Size(110, 78);
             this.grpSauce.TabIndex = 5;
@@ -238,7 +240,7 @@
             this.grpCrust.Controls.Add(this.radThin);
             this.grpCrust.Controls.Add(this.radStuffed);
             this.grpCrust.Controls.Add(this.radRegular);
-            this.grpCrust.Location = new System.Drawing.Point(143, 91);
+            this.grpCrust.Location = new System.Drawing.Point(141, 94);
             this.grpCrust.Name = "grpCrust";
             this.grpCrust.Size = new System.Drawing.Size(110, 98);
             this.grpCrust.TabIndex = 26;
@@ -278,7 +280,7 @@
             this.grpPizzaSizes.Controls.Add(this.radLargeSize);
             this.grpPizzaSizes.Controls.Add(this.radMediumSize);
             this.grpPizzaSizes.Controls.Add(this.radSmallSize);
-            this.grpPizzaSizes.Location = new System.Drawing.Point(147, 195);
+            this.grpPizzaSizes.Location = new System.Drawing.Point(141, 198);
             this.grpPizzaSizes.Name = "grpPizzaSizes";
             this.grpPizzaSizes.Size = new System.Drawing.Size(117, 103);
             this.grpPizzaSizes.TabIndex = 29;
@@ -318,11 +320,29 @@
             this.radSmallSize.Text = "Small";
             this.radSmallSize.UseVisualStyleBackColor = true;
             // 
+            // txtOrderName
+            // 
+            this.txtOrderName.Location = new System.Drawing.Point(144, 342);
+            this.txtOrderName.Name = "txtOrderName";
+            this.txtOrderName.Size = new System.Drawing.Size(118, 23);
+            this.txtOrderName.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(141, 321);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 15);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Order Name:";
+            // 
             // PizzaAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 385);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtOrderName);
             this.Controls.Add(this.grpPizzaSizes);
             this.Controls.Add(this.grpIngredients);
             this.Controls.Add(this.btnPreset);
@@ -341,6 +361,7 @@
             this.grpPizzaSizes.ResumeLayout(false);
             this.grpPizzaSizes.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -369,5 +390,7 @@
         private RadioButton radLargeSize;
         private RadioButton radMediumSize;
         private RadioButton radSmallSize;
+        private TextBox txtOrderName;
+        private Label label1;
     }
 }
