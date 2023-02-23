@@ -162,5 +162,10 @@ namespace PizzaRe_up
                 return false;
             }
         }
+
+        private void PizzaAppForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
