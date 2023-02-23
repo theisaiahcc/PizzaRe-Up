@@ -1,8 +1,7 @@
 # PizzaRe-Up
 
 ## Description
-Windows form that takes orders and passes them to the kitchen. The customer can edit their order or delete it. There should be a specialty pizzas menu that has pre-selected ingredients. The kitchen can complete an order, and create one. The customers access is restricted and a login is needed to access the kitchen staff's version. 
-
+Windows form that takes orders and passes them to the database. The customer can edit their order or delete it. There should be a specialty pizzas menu that has pre-selected ingredients. The kitchen can see an order and complete an orders. There should be a form that is only accessible by the kitchen that provides these functions.
 ## Branch naming convention
 name/#1_the-issue
 
