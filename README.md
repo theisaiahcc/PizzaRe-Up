@@ -11,3 +11,6 @@ Visual Studio 2022
 ## Links
 - [Visual Basic Prefixes](https://homepages.uc.edu/~thomam/Intro_OOP_Text/Misc/VB_prefixes.html)
 - [CRUD](https://www.codecademy.com/article/what-is-crud)
+
+## Getting started
+- In the Nuget Package Manager Console type the command "Update-Database" to create the database on your machine
