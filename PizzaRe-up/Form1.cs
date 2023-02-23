@@ -31,70 +31,116 @@ namespace PizzaRe_up
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             using PizzaContext DbContext = new();
-            // come back
+          
             string ingredients = "Cheese";
             double price = 0;
-            foreach (Control control in grpIngredients.Controls)
-            {
-                if (control is CheckBox checkBox)
-                {
-                    // If checks are concatenated with checkboxes.
-                    bool isChecked = checkBox.Checked;
-                    if(isChecked)
-                    {
-                        ingredients = ingredients + ", " + checkBox.Text;
-                        price += 1;
-                    }
-                }
+            getIngredients(ref ingredients, ref price);
 
-            }
-            string sauce = string.Empty;
-            if(radWhiteSauce.Checked)
-            {
-                sauce = "white";
-            }
-            else
-            {
-                sauce = "red";
-            }
+            // get sauce, size, and crust type by calling local functions
+            string sauce = getSauce();
+            char size = getSize();
+            string crust = getCrustType();
+            price = getPrice(sauce, size, crust);
 
-            char size = 'm';
-            if(radSmallSize.Checked)
-            {
-                size = 's';
-                price += 8;
-            }
-            else if(radLargeSize.Checked)
-            {
-                size = 'l';
-                price += 12;
-            }
-            else
-            {
-                price += 10;
-            }
-
-            string crust = string.Empty;
-            if(radThin.Checked)
-            {
-                crust = "thin";
-                price += 1;
-            }
-            else if(radRegular.Checked)
-            {
-                crust = "regular";
-
-            }
-            else
-            {
-                crust = "stuffed";
-                price += 2;
-            }
-            
+            // create pizza object and pass to PizzaContext add function
             Pizza p = new Pizza(ingredients, sauce, price, crust, size, "Isaiah");
-            DbContext.Pizzas.Add(p);
-            DbContext.SaveChanges();
+            DbContext.Add(p);
 
+            // Adds 1 to price for each ingredient and concatenates ingredients string
+            void getIngredients(ref string ingredients, ref double price)
+            {
+                foreach (Control control in grpIngredients.Controls)
+                {
+                    if (control is CheckBox checkBox)
+                    {
+                        // If checked, concatenate into ingredient string
+                        bool isChecked = checkBox.Checked;
+                        if (isChecked)
+                        {
+                            ingredients = ingredients + ", " + checkBox.Text;
+                            price += 1;
+                        }
+                    }
+
+                }
+            }
+
+            // returns sauce string representing type of sauce
+            string getSauce()
+            {
+                if (radWhiteSauce.Checked)
+                {
+                    return "white";
+                }
+                else
+                {
+                    return "red";
+                }
+            }
+
+            // returns char representing size
+            char getSize()
+            {
+                if (radSmallSize.Checked)
+                {
+                    return 's';
+
+                }
+                else if (radLargeSize.Checked)
+                {
+                    return 'l';
+
+                }
+                else
+                {
+                    return 'm';
+                }
+            }
+
+            // returns crust string representing type of crust
+            string getCrustType()
+            {
+                if (radThin.Checked)
+                {
+                    return "thin";
+                }
+                else if (radRegular.Checked)
+                {
+                    return "regular";
+
+                }
+                else
+                {
+                    return "stuffed";
+                }
+            }
+
+            // returns price based on selections
+            double getPrice(string sauce, char size, string crust)
+            {
+                double price = 8;
+                if (sauce != "red")
+                {
+                    price += 1;
+                }
+                if (size == 'm')
+                {
+                    price += 2;
+                }
+                else if(size == 'l')
+                {
+                    price += 4;
+                }
+                if (crust == "thin")
+                {
+                    price += 1;
+                }
+                else if (crust == "stuffed")
+                {
+                    price += 2;
+                }
+                return price;
+            }
         }
     }
 }

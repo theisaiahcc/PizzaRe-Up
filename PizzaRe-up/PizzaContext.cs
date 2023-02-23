@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using 
 
 namespace PizzaRe_up
 {
@@ -12,6 +13,13 @@ namespace PizzaRe_up
         public PizzaContext()
         {
 
+        }
+
+        public void Add(Pizza p)
+        {
+            using PizzaContext DbContext = new();
+            DbContext.Pizzas.Add(p);
+            DbContext.SaveChanges();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
