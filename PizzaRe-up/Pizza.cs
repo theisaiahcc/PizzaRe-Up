@@ -67,5 +67,10 @@ namespace PizzaRe_up
         /// The customer name for the order.
         /// </summary>
         public string CustomerName { get; set; }
+
+        public override string ToString()
+        {
+            return CustomerName + "Size: " + Size + "Pizza: " + Ingredients;
+        }
     }
 }
