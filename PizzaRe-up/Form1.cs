@@ -55,7 +55,8 @@ namespace PizzaRe_up
                 Pizza p = new Pizza(ingredients, sauce, price, crust, size, name);
                 DbContext.Add(p);
             }
-            
+            MessageBox.Show("Your order has been completed");
+
 
             // Adds 1 to price for each ingredient and concatenates ingredients string
             void getIngredients(ref string ingredients, ref double price)
@@ -161,6 +162,11 @@ namespace PizzaRe_up
                 }
                 return false;
             }
+        }
+
+        private void PizzaAppForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

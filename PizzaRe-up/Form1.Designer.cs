@@ -352,6 +352,7 @@
             this.Controls.Add(this.grpSauce);
             this.Name = "PizzaAppForm";
             this.Text = "Pizza App";
+            this.Load += new System.EventHandler(this.PizzaAppForm_Load_1);
             this.grpSauce.ResumeLayout(false);
             this.grpSauce.PerformLayout();
             this.grpCrust.ResumeLayout(false);
