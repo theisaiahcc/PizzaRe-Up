@@ -10,6 +10,15 @@ namespace PizzaRe_up
 {
     public class Pizza
     {
+        /// <summary>
+        /// Represents pizza ingredients and customerName inside class.
+        /// </summary>
+        /// <param name="Ingredients"></param>
+        /// <param name="Sauces"></param>
+        /// <param name="Price"></param>
+        /// <param name="Crust"></param>
+        /// <param name="Size"></param>
+        /// <param name="customerName"></param>
         public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size, string customerName)
         {
             this.Ingredients = Ingredients;
@@ -21,12 +30,17 @@ namespace PizzaRe_up
         }
 
         /// <summary>
-        /// Ingredients for the pizza(s).
+        /// PizzaId is for which pizza is unique to the id.
+        /// Ex: If an order is handed out, each order has a unique id given to the customer.
         /// </summary>
         [Key]
         [Column("PizzaId", Order = 1)]
         public int PizzaId { get; set; }
 
+        /// <summary>
+        /// Ingredients for the pizza(s).
+        /// Ex: Bacon, Mushrooms, Jalepenos, etc.
+        /// </summary>
         public string Ingredients { get; set; }
 
         /// <summary>
@@ -39,10 +53,19 @@ namespace PizzaRe_up
         /// </summary>
         public double Price { get; set; }
 
+        /// <summary>
+        /// Crust selections for the pizza(s).
+        /// </summary>
         public string Crust { get; set; }
 
+        /// <summary>
+        /// Size selections for the pizza(s).
+        /// </summary>
         public char Size { get; set; }
 
+        /// <summary>
+        /// The customer name for the order.
+        /// </summary>
         public string CustomerName { get; set; }
     }
 }
