@@ -40,11 +40,22 @@ namespace PizzaRe_up
             string sauce = getSauce();
             char size = getSize();
             string crust = getCrustType();
-            price = getPrice(sauce, size, crust);
+            price += getPrice(sauce, size, crust);
 
-            // create pizza object and pass to PizzaContext add function
-            Pizza p = new Pizza(ingredients, sauce, price, crust, size, "Isaiah");
-            DbContext.Add(p);
+            // get name
+            if (!validName(txtOrderName.Text))
+            {
+                MessageBox.Show("Order name cannot be empty.", "Order name required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                // get name
+                string name = txtOrderName.Text;
+                // create pizza object and pass to PizzaContext add function
+                Pizza p = new Pizza(ingredients, sauce, price, crust, size, name);
+                DbContext.Add(p);
+            }
+            
 
             // Adds 1 to price for each ingredient and concatenates ingredients string
             void getIngredients(ref string ingredients, ref double price)
@@ -140,6 +151,15 @@ namespace PizzaRe_up
                     price += 2;
                 }
                 return price;
+            }
+
+            bool validName(string name)
+            {
+                if (name != string.Empty && name != "")
+                {
+                    return true;
+                }
+                return false;
             }
         }
     }
