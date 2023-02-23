@@ -4,7 +4,7 @@
 Windows form that takes orders and passes them to the database. The customer can edit their order or delete it. There should be a specialty pizzas menu that has pre-selected ingredients. The kitchen can see and close orders. There should be a form that is only accessible by the kitchen that provides these functions.
 
 ## Getting started
-In the Nuget Package Manager Console type the command "Update-Database" to create the database on your machine
+In the Nuget Package Manager Console, type the command "Update-Database" to create the database on your machine
 
 ## Branch naming convention
 name/#1_the-issue
