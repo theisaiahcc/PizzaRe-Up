@@ -11,8 +11,8 @@ using PizzaRe_up;
 namespace PizzaReup.Migrations
 {
     [DbContext(typeof(PizzaContext))]
-    [Migration("20230215223349_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230226225247_InitCommit")]
+    partial class InitCommit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,7 +49,7 @@ namespace PizzaReup.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<string>("Sauces")
+                    b.Property<string>("Sauce")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -46,7 +46,7 @@ namespace PizzaReup.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<string>("Sauces")
+                    b.Property<string>("Sauce")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
