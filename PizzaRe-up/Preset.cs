@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace PizzaRe_up
 {
     public partial class Preset : Form
     {
+
+        public List<string> Presets = new List<string>();
         public Preset()
         {
             InitializeComponent();
@@ -19,7 +22,22 @@ namespace PizzaRe_up
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            int index = 4;
+            foreach (Control control in grpSpecial.Controls)
+            {
+                if (control is RadioButton radButton)
+                {
+                    // If checked, concatenate into ingredient string
+                    bool isChecked = radButton.Checked;
+                    if (isChecked)
+                    {
+                        Tag = Presets[index];
+                    }
+                    index--;
+                }
 
+            }
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -54,26 +72,35 @@ namespace PizzaRe_up
 
         private void radio_CheckedChanged()
         {
-            if(radMeatLover.Checked)
+            if (radMeatLover.Checked)
             {
                 txtDescription.Text = "Lots of meat";
             }
-            if(radHawaiian.Checked)
+            if (radHawaiian.Checked)
             {
-                txtDescription.Text = "With pineapples";
+                txtDescription.Text = "Ham and pineapple";
             }
-            if(radMemphisChicken.Checked)
+            if (radMemphisChicken.Checked)
             {
-                txtDescription.Text = "With chicken";
+                txtDescription.Text = "Chicken and onions";
             }
-            if(radSupreme.Checked)
+            if (radSupreme.Checked)
             {
-                txtDescription.Text = "With meat and veggies";
+                txtDescription.Text = "Lots of meat and veggies";
             }
-            if(radVegan.Checked)
+            if (radVegetarian.Checked)
             {
-                txtDescription.Text = "With vegetables";
+                txtDescription.Text = "Veggies only";
             }
+        }
+
+        private void Preset_Load(object sender, EventArgs e)
+        {
+            Presets.Add("Pepperoni, Sausage, Bacon, Ham"); // meat lovers
+            Presets.Add("Ham, Pineapple"); // hawaiian
+            Presets.Add("Chicken, Onions"); // memphis chicken
+            Presets.Add("Peppers, Mushrooms, Olives, Onions"); // vegetarian
+            Presets.Add("Pepperoni, Bacon, Ham, Peppers, Onions, Mushrooms, Olives"); // supreme
         }
     }
 }

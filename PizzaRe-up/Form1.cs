@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace PizzaRe_up
 {
     public partial class PizzaAppForm : Form
     {
+
         public PizzaAppForm()
         {
             InitializeComponent();
@@ -17,10 +19,22 @@ namespace PizzaRe_up
             editForm.ShowDialog();
         }
 
+        private void LoadPizzaIngredients(string ingredients)
+        {
+            Pizza pizza = new Pizza(ingredients);
+            LoadPizzaObject(pizza);
+        }
+
         private void btnPreset_Click(object sender, EventArgs e)
         {
             Preset presetForm = new Preset();
             presetForm.ShowDialog();
+
+            if (presetForm.Tag != null)
+            {
+                string ingredients = presetForm.Tag as string;
+                LoadPizzaIngredients(ingredients);
+            }
         }
 
         private void PizzaAppForm_Load(object sender, EventArgs e)
@@ -31,7 +45,7 @@ namespace PizzaRe_up
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             using PizzaContext DbContext = new();
-          
+
             string ingredients = "Cheese";
             double price = 0;
             getIngredients(ref ingredients, ref price);
@@ -139,7 +153,7 @@ namespace PizzaRe_up
                 {
                     price += 2;
                 }
-                else if(size == 'l')
+                else if (size == 'l')
                 {
                     price += 4;
                 }
@@ -164,9 +178,73 @@ namespace PizzaRe_up
             }
         }
 
-        private void PizzaAppForm_Load_1(object sender, EventArgs e)
+        private void LoadPizzaObject(Pizza pizza)
         {
+            selectIngredients(pizza.Ingredients);
+            selectSauceCrustSize(pizza.Sauce, pizza.Crust, pizza.Size);
+            fillCustomerName(pizza.CustomerName);
 
+            void selectIngredients(string ingredients)
+            {
+                foreach (Control control in grpIngredients.Controls)
+                {
+                    if (control is CheckBox checkBox)
+                    {
+                        checkBox.Checked = false;
+                        if (ingredients.Contains(checkBox.Text))
+                        {
+                            checkBox.Checked = true;
+                        }
+                    }
+
+                }
+            }
+
+            void selectSauceCrustSize(string sauce, string crust, char size)
+            {
+                // select sauce
+                if (sauce != "red")
+                {
+                    radWhiteSauce.Checked = true;
+                }
+                else
+                {
+                    radRedSauce.Checked = true;
+                }
+
+                // select crust
+                if (crust == "thin")
+                {
+                    radThin.Checked = true;
+                }
+                else if (crust == "regular")
+                {
+                    radRegular.Checked = true;
+                }
+                else
+                {
+                    radStuffed.Checked = true;
+                }
+
+                // select size
+                if (size == 'S')
+                {
+                    radSmallSize.Checked = true;
+                }
+                else if (size == 'M')
+                {
+                    radMediumSize.Checked = true;
+                }
+                else
+                {
+                    radLargeSize.Checked = true;
+                }
+            }
+
+            void fillCustomerName(string name)
+            {
+                txtOrderName.Text = name;
+            }
         }
     }
 }

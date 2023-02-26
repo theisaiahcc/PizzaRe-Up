@@ -28,179 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpSpecial = new System.Windows.Forms.GroupBox();
-            this.radSupreme = new System.Windows.Forms.RadioButton();
-            this.radVegan = new System.Windows.Forms.RadioButton();
-            this.radMemphisChicken = new System.Windows.Forms.RadioButton();
-            this.radHawaiian = new System.Windows.Forms.RadioButton();
-            this.radMeatLover = new System.Windows.Forms.RadioButton();
-            this.btnSelect = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.grpSpecial.SuspendLayout();
-            this.SuspendLayout();
+            grpSpecial = new GroupBox();
+            radSupreme = new RadioButton();
+            radVegetarian = new RadioButton();
+            radMemphisChicken = new RadioButton();
+            radHawaiian = new RadioButton();
+            radMeatLover = new RadioButton();
+            btnSelect = new Button();
+            btnCancel = new Button();
+            txtDescription = new TextBox();
+            grpSpecial.SuspendLayout();
+            SuspendLayout();
             // 
             // grpSpecial
             // 
-            this.grpSpecial.Controls.Add(this.radSupreme);
-            this.grpSpecial.Controls.Add(this.radVegan);
-            this.grpSpecial.Controls.Add(this.radMemphisChicken);
-            this.grpSpecial.Controls.Add(this.radHawaiian);
-            this.grpSpecial.Controls.Add(this.radMeatLover);
-            this.grpSpecial.Location = new System.Drawing.Point(12, 12);
-            this.grpSpecial.Name = "grpSpecial";
-            this.grpSpecial.Size = new System.Drawing.Size(129, 136);
-            this.grpSpecial.TabIndex = 0;
-            this.grpSpecial.TabStop = false;
-            this.grpSpecial.Text = "SpecialtyPizzas";
+            grpSpecial.Controls.Add(radSupreme);
+            grpSpecial.Controls.Add(radVegetarian);
+            grpSpecial.Controls.Add(radMemphisChicken);
+            grpSpecial.Controls.Add(radHawaiian);
+            grpSpecial.Controls.Add(radMeatLover);
+            grpSpecial.Location = new Point(12, 12);
+            grpSpecial.Name = "grpSpecial";
+            grpSpecial.Size = new Size(129, 136);
+            grpSpecial.TabIndex = 0;
+            grpSpecial.TabStop = false;
+            grpSpecial.Text = "SpecialtyPizzas";
             // 
             // radSupreme
             // 
-            this.radSupreme.AutoSize = true;
-            this.radSupreme.Location = new System.Drawing.Point(3, 111);
-            this.radSupreme.Name = "radSupreme";
-            this.radSupreme.Size = new System.Drawing.Size(72, 19);
-            this.radSupreme.TabIndex = 4;
-            this.radSupreme.TabStop = true;
-            this.radSupreme.Text = "Supreme";
-            this.radSupreme.UseVisualStyleBackColor = true;
-            this.radSupreme.CheckedChanged += new System.EventHandler(this.radSupreme_CheckedChanged);
+            radSupreme.AutoSize = true;
+            radSupreme.Location = new Point(3, 111);
+            radSupreme.Name = "radSupreme";
+            radSupreme.Size = new Size(72, 19);
+            radSupreme.TabIndex = 4;
+            radSupreme.TabStop = true;
+            radSupreme.Text = "Supreme";
+            radSupreme.UseVisualStyleBackColor = true;
+            radSupreme.CheckedChanged += radSupreme_CheckedChanged;
             // 
-            // radVegan
+            // radVegetarian
             // 
-            this.radVegan.AutoSize = true;
-            this.radVegan.Location = new System.Drawing.Point(3, 88);
-            this.radVegan.Name = "radVegan";
-            this.radVegan.Size = new System.Drawing.Size(57, 19);
-            this.radVegan.TabIndex = 3;
-            this.radVegan.TabStop = true;
-            this.radVegan.Text = "Vegan";
-            this.radVegan.UseVisualStyleBackColor = true;
-            this.radVegan.CheckedChanged += new System.EventHandler(this.radVegan_CheckedChanged);
-            // 
-            // radMemphisChicken
-            // 
-            this.radMemphisChicken.AutoSize = true;
-            this.radMemphisChicken.Location = new System.Drawing.Point(3, 65);
-            this.radMemphisChicken.Name = "radMemphisChicken";
-            this.radMemphisChicken.Size = new System.Drawing.Size(121, 19);
-            this.radMemphisChicken.TabIndex = 2;
-            this.radMemphisChicken.TabStop = true;
-            this.radMemphisChicken.Text = "Memphis Chicken";
-            this.radMemphisChicken.UseVisualStyleBackColor = true;
-            this.radMemphisChicken.CheckedChanged += new System.EventHandler(this.radMemphisChicken_CheckedChanged);
-            // 
-            // radHawaiian
-            // 
-            this.radHawaiian.AutoSize = true;
-            this.radHawaiian.Location = new System.Drawing.Point(3, 42);
-            this.radHawaiian.Name = "radHawaiian";
-            this.radHawaiian.Size = new System.Drawing.Size(77, 19);
-            this.radHawaiian.TabIndex = 1;
-            this.radHawaiian.TabStop = true;
-            this.radHawaiian.Text = "Hawaiian ";
-            this.radHawaiian.UseVisualStyleBackColor = true;
-            this.radHawaiian.CheckedChanged += new System.EventHandler(this.radHawaiian_CheckedChanged);
-            // 
-            // radMeatLover
-            // 
-            this.radMeatLover.AutoSize = true;
-            this.radMeatLover.Location = new System.Drawing.Point(3, 19);
-            this.radMeatLover.Name = "radMeatLover";
-            this.radMeatLover.Size = new System.Drawing.Size(84, 19);
-            this.radMeatLover.TabIndex = 0;
-            this.radMeatLover.TabStop = true;
-            this.radMeatLover.Text = "Meat Lover";
-            this.radMeatLover.UseVisualStyleBackColor = true;
-            this.radMeatLover.CheckedChanged += new System.EventHandler(this.radMeatLover_CheckedChanged);
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Location = new System.Drawing.Point(12, 209);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(103, 40);
-            this.btnSelect.TabIndex = 0;
-            this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
-            // radVegan
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(164, 209);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 40);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            radVegetarian.AutoSize = true;
+            radVegetarian.Location = new Point(3, 88);
+            radVegetarian.Name = "radVegetarian";
+            radVegetarian.Size = new Size(80, 19);
+            radVegetarian.TabIndex = 3;
+            radVegetarian.TabStop = true;
+            radVegetarian.Text = "Vegetarian";
+            radVegetarian.UseVisualStyleBackColor = true;
+            radVegetarian.CheckedChanged += radVegan_CheckedChanged;
             // 
             // radMemphisChicken
             // 
-            this.radMemphisChicken.AutoSize = true;
-            this.radMemphisChicken.Location = new System.Drawing.Point(3, 65);
-            this.radMemphisChicken.Name = "radMemphisChicken";
-            this.radMemphisChicken.Size = new System.Drawing.Size(121, 19);
-            this.radMemphisChicken.TabIndex = 2;
-            this.radMemphisChicken.TabStop = true;
-            this.radMemphisChicken.Text = "Memphis Chicken";
-            this.radMemphisChicken.UseVisualStyleBackColor = true;
+            radMemphisChicken.AutoSize = true;
+            radMemphisChicken.Location = new Point(3, 65);
+            radMemphisChicken.Name = "radMemphisChicken";
+            radMemphisChicken.Size = new Size(121, 19);
+            radMemphisChicken.TabIndex = 2;
+            radMemphisChicken.TabStop = true;
+            radMemphisChicken.Text = "Memphis Chicken";
+            radMemphisChicken.UseVisualStyleBackColor = true;
+            radMemphisChicken.CheckedChanged += radMemphisChicken_CheckedChanged;
             // 
             // radHawaiian
             // 
-            this.radHawaiian.AutoSize = true;
-            this.radHawaiian.Location = new System.Drawing.Point(3, 42);
-            this.radHawaiian.Name = "radHawaiian";
-            this.radHawaiian.Size = new System.Drawing.Size(77, 19);
-            this.radHawaiian.TabIndex = 1;
-            this.radHawaiian.TabStop = true;
-            this.radHawaiian.Text = "Hawaiian ";
-            this.radHawaiian.UseVisualStyleBackColor = true;
+            radHawaiian.AutoSize = true;
+            radHawaiian.Location = new Point(3, 42);
+            radHawaiian.Name = "radHawaiian";
+            radHawaiian.Size = new Size(77, 19);
+            radHawaiian.TabIndex = 1;
+            radHawaiian.TabStop = true;
+            radHawaiian.Text = "Hawaiian ";
+            radHawaiian.UseVisualStyleBackColor = true;
+            radHawaiian.CheckedChanged += radHawaiian_CheckedChanged;
             // 
             // radMeatLover
             // 
-            this.radMeatLover.AutoSize = true;
-            this.radMeatLover.Location = new System.Drawing.Point(3, 19);
-            this.radMeatLover.Name = "radMeatLover";
-            this.radMeatLover.Size = new System.Drawing.Size(84, 19);
-            this.radMeatLover.TabIndex = 0;
-            this.radMeatLover.TabStop = true;
-            this.radMeatLover.Text = "Meat Lover";
-            this.radMeatLover.UseVisualStyleBackColor = true;
+            radMeatLover.AutoSize = true;
+            radMeatLover.Location = new Point(3, 19);
+            radMeatLover.Name = "radMeatLover";
+            radMeatLover.Size = new Size(84, 19);
+            radMeatLover.TabIndex = 0;
+            radMeatLover.TabStop = true;
+            radMeatLover.Text = "Meat Lover";
+            radMeatLover.UseVisualStyleBackColor = true;
+            radMeatLover.CheckedChanged += radMeatLover_CheckedChanged;
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(15, 206);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(103, 40);
-            this.btnSelect.TabIndex = 0;
-            this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
-
+            btnSelect.Location = new Point(15, 206);
+            btnSelect.Name = "btnSelect";
+            btnSelect.Size = new Size(103, 40);
+            btnSelect.TabIndex = 0;
+            btnSelect.Text = "Select";
+            btnSelect.UseVisualStyleBackColor = true;
+            btnSelect.Click += btnSelect_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(164, 209);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(99, 40);
+            btnCancel.TabIndex = 1;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // txtDescription
             // 
-            this.txtDescription.Enabled = false;
-            this.txtDescription.Location = new System.Drawing.Point(12, 168);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(251, 23);
-            this.txtDescription.TabIndex = 0;
+            txtDescription.Enabled = false;
+            txtDescription.Location = new Point(12, 168);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(251, 23);
+            txtDescription.TabIndex = 0;
             // 
             // Preset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 258);
-            this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.grpSpecial);
-            this.Name = "Preset";
-            this.Text = "Preset";
-            this.grpSpecial.ResumeLayout(false);
-            this.grpSpecial.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(275, 258);
+            Controls.Add(txtDescription);
+            Controls.Add(btnSelect);
+            Controls.Add(btnCancel);
+            Controls.Add(grpSpecial);
+            Name = "Preset";
+            Text = "Preset";
+            Load += Preset_Load;
+            grpSpecial.ResumeLayout(false);
+            grpSpecial.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -209,7 +166,7 @@
         private Button btnSelect;
         private Button btnCancel;
         private RadioButton radSupreme;
-        private RadioButton radVegan;
+        private RadioButton radVegetarian;
         private RadioButton radMemphisChicken;
         private RadioButton radHawaiian;
         private RadioButton radMeatLover;
