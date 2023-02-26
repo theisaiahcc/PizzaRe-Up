@@ -30,6 +30,7 @@ namespace PizzaRe_up
             Preset presetForm = new Preset();
             presetForm.ShowDialog();
 
+            // Gets ingredients string from preset form
             if (presetForm.Tag != null)
             {
                 string ingredients = presetForm.Tag as string;

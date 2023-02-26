@@ -310,7 +310,7 @@
             grpPizzaSizes.TabIndex = 29;
             grpPizzaSizes.TabStop = false;
             grpPizzaSizes.Text = "Pizza Sizes";
-            grpPizzaSizes.Enter += PizzaAppForm_Load;
+            // grpPizzaSizes.Enter += PizzaAppForm_Load;
             // 
             // radLargeSize
             // 

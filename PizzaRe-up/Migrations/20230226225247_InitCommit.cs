@@ -5,7 +5,7 @@
 namespace PizzaReup.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitCommit : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace PizzaReup.Migrations
                     PizzaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Ingredients = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Sauces = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Sauce = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
                     Crust = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Size = table.Column<string>(type: "nvarchar(1)", nullable: false),
