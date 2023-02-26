@@ -164,7 +164,7 @@ namespace PizzaRe_up
             }
         }
 
-        internal void LoadPizzaObject(string v)
+        internal void LoadPizzaObject(Pizza pizza)
         {
             throw new NotImplementedException();
         }

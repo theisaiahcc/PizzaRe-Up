@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,24 @@ namespace PizzaRe_up
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            PizzaAppForm Form1 = new PizzaAppForm();
+            int index = 0;
+            foreach (Control control in grpSpecial.Controls)
+            {
+                if (control is RadioButton radButton)
+                {
+                    // If checked, concatenate into ingredient string
+                    bool isChecked = radButton.Checked;
+                    if (isChecked)
+                    {
+                        Pizza pizza = new Pizza(Presets[index], "red", 0, "regular", 'M', "");
+                        Form1.LoadPizzaObject(pizza);
+                        break;
+                    }
+                    index++;
+                }
 
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
