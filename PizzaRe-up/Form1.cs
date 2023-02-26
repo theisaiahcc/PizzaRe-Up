@@ -19,28 +19,16 @@ namespace PizzaRe_up
             editForm.ShowDialog();
         }
 
-        private void LoadPizzaIngredients(string ingredients)
-        {
-            Pizza pizza = new Pizza(ingredients);
-            LoadPizzaObject(pizza);
-        }
-
         private void btnPreset_Click(object sender, EventArgs e)
         {
             Preset presetForm = new Preset();
             presetForm.ShowDialog();
-
-            // Gets ingredients string from preset form
+            // Gets ingredients string from preset form if there's one
             if (presetForm.Tag != null)
             {
                 string ingredients = presetForm.Tag as string;
                 LoadPizzaIngredients(ingredients);
             }
-        }
-
-        private void PizzaAppForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -179,12 +167,22 @@ namespace PizzaRe_up
             }
         }
 
+        // creates pizza object from ingredients and calls load pizza object on that object
+        private void LoadPizzaIngredients(string ingredients)
+        {
+            Pizza pizza = new Pizza(ingredients);
+            LoadPizzaObject(pizza);
+        }
+
+        // Makes selections based on pizza objects ingredients
         private void LoadPizzaObject(Pizza pizza)
         {
+            
             selectIngredients(pizza.Ingredients);
             selectSauceCrustSize(pizza.Sauce, pizza.Crust, pizza.Size);
             fillCustomerName(pizza.CustomerName);
 
+            // selects the toppings
             void selectIngredients(string ingredients)
             {
                 foreach (Control control in grpIngredients.Controls)
@@ -200,7 +198,7 @@ namespace PizzaRe_up
 
                 }
             }
-
+            // selects sauce, crust, and size
             void selectSauceCrustSize(string sauce, string crust, char size)
             {
                 // select sauce
@@ -241,7 +239,7 @@ namespace PizzaRe_up
                     radLargeSize.Checked = true;
                 }
             }
-
+            // fills the Order name text box with given name
             void fillCustomerName(string name)
             {
                 txtOrderName.Text = name;

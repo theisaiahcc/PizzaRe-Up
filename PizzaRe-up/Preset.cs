@@ -23,11 +23,13 @@ namespace PizzaRe_up
         private void btnSelect_Click(object sender, EventArgs e)
         {
             int index = 4;
+            // for each..
             foreach (Control control in grpSpecial.Controls)
             {
+                // ..radio button
                 if (control is RadioButton radButton)
                 {
-                    // If checked, concatenate into ingredient string
+                    // If checked, Tag contains string at index
                     bool isChecked = radButton.Checked;
                     if (isChecked)
                     {
@@ -35,7 +37,6 @@ namespace PizzaRe_up
                     }
                     index--;
                 }
-
             }
             this.Close();
         }
@@ -96,6 +97,7 @@ namespace PizzaRe_up
 
         private void Preset_Load(object sender, EventArgs e)
         {
+            // Add preset string coinciding with the indexes of radio buttons representing pizza presets
             Presets.Add("Pepperoni, Sausage, Bacon, Ham"); // meat lovers
             Presets.Add("Ham, Pineapple"); // hawaiian
             Presets.Add("Chicken, Onions"); // memphis chicken
