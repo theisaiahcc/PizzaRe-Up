@@ -10,19 +10,29 @@ namespace PizzaRe_up
 {
     public class Pizza
     {
+
+        public Pizza(string Ingredients) 
+        {
+            this.Ingredients = Ingredients;
+            Sauce = "red";
+            Price = 0;
+            Crust = "regular";
+            Size = 'M';
+            CustomerName = "";
+        }
         /// <summary>
         /// Represents pizza ingredients and customerName inside class.
         /// </summary>
         /// <param name="Ingredients"></param>
-        /// <param name="Sauces"></param>
+        /// <param name="Sauce"></param>
         /// <param name="Price"></param>
         /// <param name="Crust"></param>
         /// <param name="Size"></param>
         /// <param name="customerName"></param>
-        public Pizza(string Ingredients, string Sauces, double Price, string Crust, char Size, string customerName)
+        public Pizza(string Ingredients, string Sauce, double Price, string Crust, char Size, string customerName)
         {
             this.Ingredients = Ingredients;
-            this.Sauces = Sauces;
+            this.Sauce = Sauce;
             this.Price = Price;
             this.Crust = Crust;
             this.Size = Size;
@@ -44,9 +54,9 @@ namespace PizzaRe_up
         public string Ingredients { get; set; }
 
         /// <summary>
-        /// Sauces for the pizza(s).
+        /// Sauce for the pizza(s).
         /// </summary>
-        public string Sauces { get; set; }
+        public string Sauce { get; set; }
 
         /// <summary>
         /// Prices for the pizza(s).

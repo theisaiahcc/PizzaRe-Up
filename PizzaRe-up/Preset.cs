@@ -22,24 +22,23 @@ namespace PizzaRe_up
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            PizzaAppForm Form1 = new PizzaAppForm();
-            int index = 0;
+            int index = 4;
             foreach (Control control in grpSpecial.Controls)
             {
                 if (control is RadioButton radButton)
                 {
+                    MessageBox.Show(radButton.Text);
                     // If checked, concatenate into ingredient string
                     bool isChecked = radButton.Checked;
                     if (isChecked)
                     {
-                        Pizza pizza = new Pizza(Presets[index], "red", 0, "regular", 'M', "");
-                        Form1.LoadPizzaObject(pizza);
-                        break;
+                        Tag = Presets[index];
                     }
-                    index++;
+                    index--;
                 }
 
             }
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

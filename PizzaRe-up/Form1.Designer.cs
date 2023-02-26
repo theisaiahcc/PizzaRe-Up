@@ -48,14 +48,14 @@
             grpCrust = new GroupBox();
             btnPreset = new Button();
             grpIngredients = new GroupBox();
+            chkOnions = new CheckBox();
+            chkPineapple = new CheckBox();
             grpPizzaSizes = new GroupBox();
             radLargeSize = new RadioButton();
             radMediumSize = new RadioButton();
             radSmallSize = new RadioButton();
             txtOrderName = new TextBox();
             label1 = new Label();
-            chkPineapple = new CheckBox();
-            chkOnions = new CheckBox();
             grpSauce.SuspendLayout();
             grpCrust.SuspendLayout();
             grpIngredients.SuspendLayout();
@@ -279,6 +279,26 @@
             grpIngredients.TabStop = false;
             grpIngredients.Text = "Ingredients";
             // 
+            // chkOnions
+            // 
+            chkOnions.AutoSize = true;
+            chkOnions.Location = new Point(6, 284);
+            chkOnions.Name = "chkOnions";
+            chkOnions.Size = new Size(64, 19);
+            chkOnions.TabIndex = 21;
+            chkOnions.Text = "Onions";
+            chkOnions.UseVisualStyleBackColor = true;
+            // 
+            // chkPineapple
+            // 
+            chkPineapple.AutoSize = true;
+            chkPineapple.Location = new Point(6, 258);
+            chkPineapple.Name = "chkPineapple";
+            chkPineapple.Size = new Size(78, 19);
+            chkPineapple.TabIndex = 20;
+            chkPineapple.Text = "Pineapple";
+            chkPineapple.UseVisualStyleBackColor = true;
+            // 
             // grpPizzaSizes
             // 
             grpPizzaSizes.Controls.Add(radLargeSize);
@@ -339,26 +359,6 @@
             label1.Size = new Size(75, 15);
             label1.TabIndex = 31;
             label1.Text = "Order Name:";
-            // 
-            // chkPineapple
-            // 
-            chkPineapple.AutoSize = true;
-            chkPineapple.Location = new Point(6, 258);
-            chkPineapple.Name = "chkPineapple";
-            chkPineapple.Size = new Size(78, 19);
-            chkPineapple.TabIndex = 20;
-            chkPineapple.Text = "Pineapple";
-            chkPineapple.UseVisualStyleBackColor = true;
-            // 
-            // chkOnions
-            // 
-            chkOnions.AutoSize = true;
-            chkOnions.Location = new Point(6, 284);
-            chkOnions.Name = "chkOnions";
-            chkOnions.Size = new Size(64, 19);
-            chkOnions.TabIndex = 21;
-            chkOnions.Text = "Onions";
-            chkOnions.UseVisualStyleBackColor = true;
             // 
             // PizzaAppForm
             // 
