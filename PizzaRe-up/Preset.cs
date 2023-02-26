@@ -27,7 +27,6 @@ namespace PizzaRe_up
             {
                 if (control is RadioButton radButton)
                 {
-                    MessageBox.Show(radButton.Text);
                     // If checked, concatenate into ingredient string
                     bool isChecked = radButton.Checked;
                     if (isChecked)
@@ -79,19 +78,19 @@ namespace PizzaRe_up
             }
             if (radHawaiian.Checked)
             {
-                txtDescription.Text = "With pineapples";
+                txtDescription.Text = "Ham and pineapple";
             }
             if (radMemphisChicken.Checked)
             {
-                txtDescription.Text = "With chicken";
+                txtDescription.Text = "Chicken and onions";
             }
             if (radSupreme.Checked)
             {
-                txtDescription.Text = "With meat and veggies";
+                txtDescription.Text = "Lots of meat and veggies";
             }
             if (radVegetarian.Checked)
             {
-                txtDescription.Text = "With vegetables";
+                txtDescription.Text = "Veggies only";
             }
         }
 
@@ -100,8 +99,8 @@ namespace PizzaRe_up
             Presets.Add("Pepperoni, Sausage, Bacon, Ham"); // meat lovers
             Presets.Add("Ham, Pineapple"); // hawaiian
             Presets.Add("Chicken, Onions"); // memphis chicken
-            Presets.Add("Pepperoni, Bacon, Ham, Peppers, Onions, Mushrooms, Olives"); // supreme
             Presets.Add("Peppers, Mushrooms, Olives, Onions"); // vegetarian
+            Presets.Add("Pepperoni, Bacon, Ham, Peppers, Onions, Mushrooms, Olives"); // supreme
         }
     }
 }
