@@ -95,17 +95,17 @@ namespace PizzaRe_up
             {
                 if (radSmallSize.Checked)
                 {
-                    return 's';
+                    return 'S';
 
                 }
                 else if (radLargeSize.Checked)
                 {
-                    return 'l';
+                    return 'L';
 
                 }
                 else
                 {
-                    return 'm';
+                    return 'M';
                 }
             }
 
