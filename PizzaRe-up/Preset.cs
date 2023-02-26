@@ -12,6 +12,8 @@ namespace PizzaRe_up
 {
     public partial class Preset : Form
     {
+
+        public List<string> Presets = new List<string>();
         public Preset()
         {
             InitializeComponent();
@@ -54,26 +56,35 @@ namespace PizzaRe_up
 
         private void radio_CheckedChanged()
         {
-            if(radMeatLover.Checked)
+            if (radMeatLover.Checked)
             {
                 txtDescription.Text = "Lots of meat";
             }
-            if(radHawaiian.Checked)
+            if (radHawaiian.Checked)
             {
                 txtDescription.Text = "With pineapples";
             }
-            if(radMemphisChicken.Checked)
+            if (radMemphisChicken.Checked)
             {
                 txtDescription.Text = "With chicken";
             }
-            if(radSupreme.Checked)
+            if (radSupreme.Checked)
             {
                 txtDescription.Text = "With meat and veggies";
             }
-            if(radVegan.Checked)
+            if (radVegetarian.Checked)
             {
                 txtDescription.Text = "With vegetables";
             }
+        }
+
+        private void Preset_Load(object sender, EventArgs e)
+        {
+            Presets.Add("Pepperoni, Sausage, Bacon, Ham"); // meat lovers
+            Presets.Add("Ham, Pineapple"); // hawaiian
+            Presets.Add("Chicken, Onions"); // memphis chicken
+            Presets.Add("Pepperoni, Bacon, Ham, Peppers, Onions, Mushrooms, Olives"); // supreme
+            Presets.Add("Peppers, Mushrooms, Olives, Onions"); // vegetarian
         }
     }
 }

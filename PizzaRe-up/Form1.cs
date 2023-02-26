@@ -31,7 +31,7 @@ namespace PizzaRe_up
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             using PizzaContext DbContext = new();
-          
+
             string ingredients = "Cheese";
             double price = 0;
             getIngredients(ref ingredients, ref price);
@@ -139,7 +139,7 @@ namespace PizzaRe_up
                 {
                     price += 2;
                 }
-                else if(size == 'l')
+                else if (size == 'l')
                 {
                     price += 4;
                 }
@@ -164,9 +164,9 @@ namespace PizzaRe_up
             }
         }
 
-        private void PizzaAppForm_Load_1(object sender, EventArgs e)
+        internal void LoadPizzaObject(string v)
         {
-
+            throw new NotImplementedException();
         }
     }
 }
