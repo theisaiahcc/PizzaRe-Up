@@ -244,5 +244,10 @@ namespace PizzaRe_up
                 txtOrderName.Text = name;
             }
         }
+
+        private void PizzaAppForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
