@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstOrders = new System.Windows.Forms.ListBox();
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lstOrders
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(238, 169);
-            this.listBox1.TabIndex = 0;
+            this.lstOrders.FormattingEnabled = true;
+            this.lstOrders.ItemHeight = 15;
+            this.lstOrders.Location = new System.Drawing.Point(12, 12);
+            this.lstOrders.Name = "lstOrders";
+            this.lstOrders.Size = new System.Drawing.Size(238, 169);
+            this.lstOrders.TabIndex = 0;
             // 
             // btnSelect
             // 
@@ -68,16 +68,17 @@
             this.ClientSize = new System.Drawing.Size(355, 196);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstOrders);
             this.Name = "Edit";
             this.Text = "Edit";
+            this.Load += new System.EventHandler(this.Edit_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ListBox listBox1;
+        private ListBox lstOrders;
         private Button btnSelect;
         private Button btnCancel;
     }
