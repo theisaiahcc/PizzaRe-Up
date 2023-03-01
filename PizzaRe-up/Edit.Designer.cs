@@ -41,7 +41,6 @@
             this.lstOrders.Name = "lstOrders";
             this.lstOrders.Size = new System.Drawing.Size(238, 169);
             this.lstOrders.TabIndex = 0;
-            this.lstOrders.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnSelect
             // 

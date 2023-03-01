@@ -23,20 +23,10 @@ namespace PizzaRe_up
             this.Close();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-/*            using PizzaContext dbContext = new();
-            List<Pizza> allPizzas = dbContext.Pizzas.ToList();
-
-            lstOrders.Items.Add(allPizzas);*/
-        }
-
         private void Edit_Load(object sender, EventArgs e)
         {
             using PizzaContext dbContext = new();
             List<Pizza> allPizzas = dbContext.Pizzas.ToList();
-
-/*            lstOrders.Items.Add(allPizzas);*/
 
             foreach(Pizza pizza in allPizzas)
             {
