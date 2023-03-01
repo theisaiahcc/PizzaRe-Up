@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,27 @@ namespace PizzaRe_up
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+/*            using PizzaContext dbContext = new();
+            List<Pizza> allPizzas = dbContext.Pizzas.ToList();
+
+            lstOrders.Items.Add(allPizzas);*/
+        }
+
+        private void Edit_Load(object sender, EventArgs e)
+        {
+            using PizzaContext dbContext = new();
+            List<Pizza> allPizzas = dbContext.Pizzas.ToList();
+
+/*            lstOrders.Items.Add(allPizzas);*/
+
+            foreach(Pizza pizza in allPizzas)
+            {
+                lstOrders.Items.Add(pizza.ToString());
+            }
         }
     }
 }
