@@ -28,9 +28,23 @@ namespace PizzaRe_up
             using PizzaContext dbContext = new();
             List<Pizza> allPizzas = dbContext.Pizzas.ToList();
 
-            foreach(Pizza pizza in allPizzas)
+            foreach(Pizza p in allPizzas)
             {
-                lstOrders.Items.Add(pizza.ToString());
+                lstOrders.Items.Add(p.ToString());
+            }            
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            if (lstOrders.SelectedItem != null)
+            {
+                string orderName = lstOrders.SelectedItem.ToString();
+                using PizzaContext dbContext = new();
+                Pizza pizza = (from p in dbContext.Pizzas
+                               where p.CustomerName == orderName.Substring(0, orderName.IndexOf(" "))
+                               select p).SingleOrDefault();
+                Tag = pizza;
+                this.Close();
             }
         }
     }

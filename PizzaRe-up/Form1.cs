@@ -17,6 +17,11 @@ namespace PizzaRe_up
         {
             Edit editForm = new Edit();
             editForm.ShowDialog();
+            if(editForm.Tag != null)
+            {
+                Pizza pizza = editForm.Tag as Pizza;
+                LoadPizzaObject(pizza);
+            }
         }
 
         private void btnPreset_Click(object sender, EventArgs e)
