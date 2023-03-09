@@ -80,7 +80,7 @@ namespace PizzaRe_up
 
         public override string ToString()
         {
-            return CustomerName + " Size: " + Size + " Pizza: " + Ingredients;
+            return PizzaId + " " + CustomerName + " Size: " + Size + " Pizza: " + Ingredients;
         }
     }
 }

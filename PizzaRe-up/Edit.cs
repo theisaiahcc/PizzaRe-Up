@@ -41,7 +41,7 @@ namespace PizzaRe_up
                 string orderName = lstOrders.SelectedItem.ToString();
                 using PizzaContext dbContext = new();
                 Pizza pizza = (from p in dbContext.Pizzas
-                               where p.CustomerName == orderName.Substring(0, orderName.IndexOf(" "))
+                               where p.PizzaId == Int32.Parse(orderName.Substring(0, orderName.IndexOf(" ")))
                                select p).SingleOrDefault();
                 Tag = pizza;
                 this.Close();
