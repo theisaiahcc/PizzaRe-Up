@@ -76,48 +76,11 @@ namespace PizzaRe_up
                     DbContext.Update(p, Id);
                     MessageBox.Show("Your order has been updated.");
                 }
-                
-                
-                DbContext.Add(p);
-                MessageBox.Show("Your order has been completed");
 
+                editing = false;
+                changeSubmitText();
                 // Clears the form when submit button is clicked
-                if (txtOrderName.Text != "")
-                {
-                    txtOrderName.Text = "";
-                }
-
-                foreach (Control checkBox in grpIngredients.Controls)
-                {
-                    if (checkBox is CheckBox chkBox)
-                    {
-                        chkBox.Checked = false;
-                    }
-                }
-
-                foreach (Control radioSauce in grpSauce.Controls)
-                {
-                    if (radioSauce is RadioButton rdoButton)
-                    {
-                        radRedSauce.Checked = true;
-                    }
-                }
-
-                foreach (Control radioCrust in grpCrust.Controls)
-                {
-                    if (radioCrust is RadioButton rdoButton)
-                    {
-                        radRegular.Checked = true;
-                    }
-                }
-
-                foreach (Control radioSize in grpPizzaSizes.Controls)
-                {
-                    if(radioSize is RadioButton rdoButton)
-                    {
-                        radMediumSize.Checked = true;
-                    }
-                }
+                ClearForm();
             }
 
             // Adds 1 to price for each ingredient and concatenates ingredients string
@@ -225,8 +188,45 @@ namespace PizzaRe_up
                 return false;
             }
 
-            editing = false;
-            changeSubmitText();
+            void ClearForm()
+            {
+                if (txtOrderName.Text != "")
+                {
+                    txtOrderName.Text = "";
+                }
+
+                foreach (Control checkBox in grpIngredients.Controls)
+                {
+                    if (checkBox is CheckBox chkBox)
+                    {
+                        chkBox.Checked = false;
+                    }
+                }
+
+                foreach (Control radioSauce in grpSauce.Controls)
+                {
+                    if (radioSauce is RadioButton rdoButton)
+                    {
+                        radRedSauce.Checked = true;
+                    }
+                }
+
+                foreach (Control radioCrust in grpCrust.Controls)
+                {
+                    if (radioCrust is RadioButton rdoButton)
+                    {
+                        radRegular.Checked = true;
+                    }
+                }
+
+                foreach (Control radioSize in grpPizzaSizes.Controls)
+                {
+                    if (radioSize is RadioButton rdoButton)
+                    {
+                        radMediumSize.Checked = true;
+                    }
+                }
+            }
         }
 
         private void changeSubmitText()
