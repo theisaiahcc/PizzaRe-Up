@@ -24,6 +24,7 @@ namespace PizzaRe_up
                 Pizza pizza = editForm.Tag as Pizza;
 
                 editing = true;
+                changeSubmitText();
                 Id = pizza.PizzaId;
                 LoadPizzaObject(pizza);
             }
@@ -68,12 +69,12 @@ namespace PizzaRe_up
                 if (!editing)
                 {
                     DbContext.Add(p);
-                    MessageBox.Show("Your order has been completed");
+                    MessageBox.Show("Your order has been completed.");
                 }
                 else
                 {
                     DbContext.Update(p, Id);
-                    MessageBox.Show("Your order has been updated");
+                    MessageBox.Show("Your order has been updated.");
                 }
                 
                 
@@ -182,6 +183,21 @@ namespace PizzaRe_up
                     return true;
                 }
                 return false;
+            }
+
+            editing = false;
+            changeSubmitText();
+        }
+
+        private void changeSubmitText()
+        {
+            if (!editing)
+            {
+                btnSubmit.Text = "Submit New Order";
+            }
+            else
+            {
+                btnSubmit.Text = "Update Order";
             }
         }
 
