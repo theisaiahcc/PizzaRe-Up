@@ -7,6 +7,8 @@ namespace PizzaRe_up
 {
     public partial class PizzaAppForm : Form
     {
+        public bool editing = false;
+        public int Id = -1;
 
         public PizzaAppForm()
         {
@@ -20,6 +22,10 @@ namespace PizzaRe_up
             if(editForm.Tag != null)
             {
                 Pizza pizza = editForm.Tag as Pizza;
+
+                editing = true;
+                changeSubmitText();
+                Id = pizza.PizzaId;
                 LoadPizzaObject(pizza);
             }
         }
@@ -39,7 +45,6 @@ namespace PizzaRe_up
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             using PizzaContext DbContext = new();
-
             string ingredients = "Cheese";
             double price = 0;
             getIngredients(ref ingredients, ref price);
@@ -61,6 +66,18 @@ namespace PizzaRe_up
                 string name = txtOrderName.Text;
                 // create pizza object and pass to PizzaContext add function
                 Pizza p = new Pizza(ingredients, sauce, price, crust, size, name);
+                if (!editing)
+                {
+                    DbContext.Add(p);
+                    MessageBox.Show("Your order has been completed.");
+                }
+                else
+                {
+                    DbContext.Update(p, Id);
+                    MessageBox.Show("Your order has been updated.");
+                }
+                
+                
                 DbContext.Add(p);
                 MessageBox.Show("Your order has been completed");
 
@@ -206,6 +223,21 @@ namespace PizzaRe_up
                     return true;
                 }
                 return false;
+            }
+
+            editing = false;
+            changeSubmitText();
+        }
+
+        private void changeSubmitText()
+        {
+            if (!editing)
+            {
+                btnSubmit.Text = "Submit New Order";
+            }
+            else
+            {
+                btnSubmit.Text = "Update Order";
             }
         }
 
