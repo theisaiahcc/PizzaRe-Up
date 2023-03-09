@@ -78,6 +78,46 @@ namespace PizzaRe_up
                 }
                 
                 
+                DbContext.Add(p);
+                MessageBox.Show("Your order has been completed");
+
+                // Clears the form when submit button is clicked
+                if (txtOrderName.Text != "")
+                {
+                    txtOrderName.Text = "";
+                }
+
+                foreach (Control checkBox in grpIngredients.Controls)
+                {
+                    if (checkBox is CheckBox chkBox)
+                    {
+                        chkBox.Checked = false;
+                    }
+                }
+
+                foreach (Control radioSauce in grpSauce.Controls)
+                {
+                    if (radioSauce is RadioButton rdoButton)
+                    {
+                        radRedSauce.Checked = true;
+                    }
+                }
+
+                foreach (Control radioCrust in grpCrust.Controls)
+                {
+                    if (radioCrust is RadioButton rdoButton)
+                    {
+                        radRegular.Checked = true;
+                    }
+                }
+
+                foreach (Control radioSize in grpPizzaSizes.Controls)
+                {
+                    if(radioSize is RadioButton rdoButton)
+                    {
+                        radMediumSize.Checked = true;
+                    }
+                }
             }
 
             // Adds 1 to price for each ingredient and concatenates ingredients string
