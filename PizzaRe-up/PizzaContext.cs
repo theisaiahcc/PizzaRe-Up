@@ -15,28 +15,32 @@ namespace PizzaRe_up
 
         }
 
-        public void Add(Pizza p)
+        public async Task Add(Pizza p)
         {
             using PizzaContext DbContext = new();
-            DbContext.Pizzas.Add(p);
-            DbContext.SaveChanges();
+            await DbContext.Pizzas.AddAsync(p);
+            await DbContext.SaveChangesAsync();
         }
 
-        public void Update(Pizza p, int id)
+        public async Task Update(Pizza p, int id)
         {
             using PizzaContext DbContext = new PizzaContext();
-            Pizza pizza = DbContext.Pizzas.Find(id);
+            Pizza? pizza = await DbContext.Pizzas.FindAsync(id);
 
+            // Create type object of type Pizza
             Type type = typeof(Pizza);
+            // Get the properties of that type
             PropertyInfo[] properties = type.GetProperties();
+            // Iterate through each property
             foreach (PropertyInfo property in properties)
             {
+                // If the property is not the ID, set the current value of the property to updated pizza
                 if (property.Name != "PizzaId")
                 {
                     DbContext.Entry(pizza).Property(property.Name).CurrentValue = property.GetValue(p);
                 }
             }
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
