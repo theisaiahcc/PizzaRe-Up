@@ -47,5 +47,20 @@ namespace PizzaRe_up
                 this.Close();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lstOrders.SelectedItem != null)
+            {
+                string orderName = lstOrders.SelectedItem.ToString();
+                using PizzaContext dbContext = new();
+                Pizza pizza = (from p in dbContext.Pizzas
+                               where p.PizzaId == Int32.Parse(orderName.Substring(0, orderName.IndexOf(" ")))
+                               select p).SingleOrDefault();
+
+                dbContext.Delete(pizza.PizzaId);
+                MessageBox.Show("Your order has been deleted!");
+            }
+        }
     }
 }
