@@ -25,13 +25,7 @@ namespace PizzaRe_up
 
         private void Edit_Load(object sender, EventArgs e)
         {
-            using PizzaContext dbContext = new();
-            List<Pizza> allPizzas = dbContext.Pizzas.ToList();
-
-            foreach(Pizza p in allPizzas)
-            {
-                lstOrders.Items.Add(p.ToString());
-            }            
+            populatePizzaList();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -60,6 +54,19 @@ namespace PizzaRe_up
 
                 dbContext.Delete(pizza.PizzaId);
                 MessageBox.Show("Your order has been deleted!");
+                populatePizzaList();
+            }
+        }
+
+        public void populatePizzaList()
+        {
+            lstOrders.Items.Clear();
+            using PizzaContext dbContext = new();
+            List<Pizza> allPizzas = dbContext.Pizzas.ToList();
+
+            foreach (Pizza p in allPizzas)
+            {
+                lstOrders.Items.Add(p.ToString());
             }
         }
     }
