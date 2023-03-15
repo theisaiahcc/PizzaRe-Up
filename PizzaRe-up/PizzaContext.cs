@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Accessibility;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,12 +44,23 @@ namespace PizzaRe_up
             }
             await DbContext.SaveChangesAsync();
         }
-
+        public async Task Delete(int id)
+        {
+            using PizzaContext DbContext = new();
+            Pizza? pizzaToDelete = await DbContext.Pizzas.FindAsync(id);
+            
+            if(pizzaToDelete != null)
+            {
+                DbContext.Pizzas.Remove(pizzaToDelete);
+                await DbContext.SaveChangesAsync();
+            }
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=PizzaRe-up;Trusted_Connection=True");
         }
 
         public DbSet<Pizza> Pizzas { get; set; }
+
     }
 }
